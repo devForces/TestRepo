@@ -1,11 +1,11 @@
 public with sharing class accExt {
     public Account acc{get;set;}
     public accExt(ApexPages.StandardController controller) {
-        //some need to be here
+        //This is constructor
     }
     
     public pagereference activeAccount(){
-    
+    	//activate account
     return null;
     }
 
