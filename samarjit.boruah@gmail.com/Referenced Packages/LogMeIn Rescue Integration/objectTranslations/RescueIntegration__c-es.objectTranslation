@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- RescueIntegration --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- RescueIntegration --></value>
+    </caseValues>
+    <fields>
+        <help><!-- The host that should be used when connecting the the Rescue API.  Acceptable values are &quot;secure.logmeinrescue.com&quot; and &quot;beta.logmeinrescue.com&quot;. --></help>
+        <label><!-- Deprecated --></label>
+        <name>API_Host__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting allows you to save the chat log as an attachment to the case rather than to the description field of the activity.  If your chat sessions are usually lengthy, you should enable this. --></help>
+        <label><!-- Deprecated --></label>
+        <name>AttachChatLogAsFile__c</name>
+    </fields>
+    <fields>
+        <help><!-- This settings will enable the URL Post handler to close the Case after writing the Rescue session data.  This is useful for integrations using Channels where the agent does not need to interact with the Case at all, but reporting is still desired. --></help>
+        <label><!-- Deprecated --></label>
+        <name>CloseCaseAfterURLPost__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Company ID for the Rescue account.  This can be found in the Rescue SSO code sample of the Admin Center. --></help>
+        <label><!-- Deprecated --></label>
+        <name>CompanyID__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, the URL Post handler will automatically reassign the Case to the user whose email matches the Rescue technician email.  This is helpful if your technicians transfer sessions, but forgot to transfer ownership of the Case. --></help>
+        <label><!-- Deprecated --></label>
+        <name>ForceCaseAssignmentToTechnician__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Single Sign On password for the LogMeIn Rescue account. --></help>
+        <label><!-- Deprecated --></label>
+        <name>RescueSSOPwd__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting allows you to control whether the tech console is required to generate a PIN code or not.  The default is true, meaning you can generate PIN codes without having the Tech Console running. --></help>
+        <label><!-- Deprecated --></label>
+        <name>TechConsoleNotRequired__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

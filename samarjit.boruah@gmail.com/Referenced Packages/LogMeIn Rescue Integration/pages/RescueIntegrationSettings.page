@@ -1,0 +1,516 @@
+<apex:page id="page" controller="logmein.RescueIntegrationSettingsCon">
+    <head>
+    <script type="text/javascript">
+            function checkBoxes(id){
+                id = id.substring(52);
+                var ext = 'page:frmChannels:pbChannels:pbsFieldMapping:pbsiCF';
+                switch(id){
+                    case 'slcfield1':
+                        var fld = '{!Channel.logmein__CField1_Map__c}';
+                        var box = document.getElementById(ext + '1a:chkCfield1');
+                        if(fld == ''){
+                            box.checked = false;
+                        }
+                        break;
+                    case 'slcfield2':
+                        var fld = '{!Channel.logmein__CField2_Map__c}';
+                        var box = document.getElementById(ext + '2a:chkCfield2');
+                        if(fld == ''){
+                            box.checked = false;
+                        }
+                        break;
+                    case 'lcfield3':
+                        var fld = '{!Channel.logmein__CField3_Map__c}';
+                        var box = document.getElementById(ext + '3a:chkCfield3');
+                        if(fld == ''){
+                            box.checked = false;
+                        }
+                        break;
+                    case 'lcfield4':
+                        var fld = '{!Channel.logmein__CField4_Map__c}';
+                        var box = document.getElementById(ext + '4a:chkCfield4');
+                        if(fld == ''){
+                            box.checked = false;
+                        }
+                        break;
+                    case 'lcfield5':
+                        var fld = '{!Channel.logmein__CField5_Map__c}';
+                        var box = document.getElementById(ext + '5a:chkCfield5');
+                        if(fld == ''){
+                            box.checked = false;
+                        }
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <apex:pageMessages id="messages" />
+    <apex:form id="frmUserInfo">
+        <a href="{!URLFOR($Resource.RescueInstantChat, '/LogMeInRescue_Integration_Salesforce.pdf')}"
+            target="_blank">{!$Label.HelpGuideLink}</a>
+        <br />
+        <br />
+        <apex:pageBlock id="pbUserInfo" title="{!$Label.RescueLoginInfo}"
+            helpTitle="{!$Label.help_helponthissection}" helpUrl="{!$Page.logmein__RescueIntegrationSettingsHelp}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!SetupAdmin}" value="{!$Label.Initialize}" status="status"
+                    reRender="txtCompanyId,messages" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="pbsAdminInfo">
+                <apex:pageBlockSectionItem helpText="{!$Label.help_RescueEmail}">
+                    <apex:outputLabel id="lblEmail" value="{!$Label.RescueAccountEmail}" />
+                    <apex:inputText id="txtEmail" value="{!Email}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem helpText="{!$Label.help_RescuePassword}">
+                    <apex:outputLabel id="lblPassword" value="{!$Label.RescuePassword}" />
+                    <apex:inputSecret id="txtPassword" value="{!Password}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:form id="frmGlobalSettings">
+        <apex:pageBlock id="pbglobalsettings" title="{!$Label.OrganizationSettings}" rendered="{!showorgsettings}"
+            helpTitle="{!$Label.help_helponthissection}" helpUrl="{!$Page.logmein__RescueIntegrationSettingsHelp}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton id="btnSaveOrgSettings" value="{!$Label.SaveSettings}" action="{!setOrgSettings}"
+                    rerender="messages" status="status" />
+            </apex:pageBlockButtons>
+            <apex:actionRegion >
+                <apex:pageBlockSection id="pbsIDInfo" title="Identification" collapsible="false">
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_CompanyID}">
+                        <apex:outputLabel id="lblCompanyId" value="{!$Label.RescueCompanyId}" />
+                        <apex:inputText id="txtCompanyId" value="{!settings.logmein__CompanyID__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_APIHost}">
+                        <apex:outputLabel id="lblAPIHost" value="{!$Label.RescueInstance}" />
+                        <apex:selectlist id="slAPIHost" value="{!settings.logmein__API_Host__c}" multiselect="false" size="1">
+                            <apex:selectOption itemValue="secure.logmeinrescue.com" itemLabel="{!$Label.Production}" />
+                            <apex:selectOption itemValue="beta.logmeinrescue.com" itemLabel="{!$Label.Beta}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_SSOPassword}">
+                        <apex:outputLabel id="lblSSOPassword" value="{!$Label.SSOPassword}" />
+                        <apex:inputText id="txtSSOPassword" value="{!settings.logmein__RescueSSOPwd__c}" />
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection id="pbsControls" title="Customization" collapsible="false">
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_TCNotRequired}">
+                        <apex:outputLabel id="lblTCNotRequired" value="{!$Label.DoNotRequireActiveTC}" />
+                        <apex:inputCheckbox id="chkTCNotRequired" value="{!settings.logmein__TechConsoleNotRequired__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_ReassignOnAccept}">
+                        <apex:outputLabel id="lblReassignOnAccept" value="{!$Label.ReassignCaseOnSessionAccept}" />
+                        <apex:inputCheckbox id="chkReassignOnAccept" value="{!settings.logmein__ForceCaseAssignmentToTechnician__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_AttachChatAsFile}">
+                        <apex:outputLabel id="lblAttachChatAsFile" value="{!$Label.AttachChatLogAsAFile}" />
+                        <apex:inputCheckBox id="chkAttachChatAsFile" value="{!settings.logmein__AttachChatLogAsFile__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_UseLooseCaseQuery}">
+                        <apex:outputLabel id="lblUseLooseCaseQuery" value="{!$Label.LookForCaseNumber}" />
+                        <apex:inputCheckBox id="chkUseLooseCaseQuery" value="{!settings.logmein__UseLooseCaseQuery__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_CloseOnSessionEnd}">
+                        <apex:outputLabel id="lblCloseOnSessionEnd" value="{!$Label.CloseTicketAtSessionEnd}" />
+                        <apex:inputCheckBox id="chkCloseOnSessionEnd" value="{!Settings.logmein__CloseCaseAfterURLPost__c}" />
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem helpText="{!$Label.help_ShowEmailLink}">
+                        <apex:outputLabel id="lblShowEmailLink" value="{!$Label.ShowEmailPINLink}" />
+                        <apex:inputCheckbox id="chkShowEmailLink" value="{!settings.logmein__ShowEmailLink__c}" />
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:actionRegion>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:form id="frmChannels">
+        <!-- start end of session data mapping config -->
+
+        <apex:pageBlock id="pbPostDataMapping" 
+            title="{!$Label.EndOfSessionMapping}"
+            helpTitle="{!$Label.help_helponthissection}" 
+            helpUrl="{!$Page.logmein__RescueIntegrationSettingsHelp}"
+        >
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton id="bPostDataMappingSave" action="{!writePostSessionDataSettings}"
+                    reRender="messages" status="status" value="{!$Label.SaveMappingSettings}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="pbsMappingStrategy" title="Data Mapping Strategy" columns="1"
+                collapsible="false">
+                <apex:pageBlockSectionItem id="pbsiMappingStrategy">
+                    <apex:outputLabel id="lMappingStrategy" value="{!$Label.LocationToWriteSessionData}" />
+                    <apex:selectRadio id="srMappingStrategy" value="{!settings.logmein__posttourlstrategy__c}">
+                        <apex:actionSupport event="onchange" reRender="opCustomMapping,opPostFieldMapping"
+                            status="status" />
+                        <apex:selectoption itemValue="default" itemLabel="{!$Label.UseDefaultSessionMapping}" />
+                        <apex:selectOption itemValue="custom" itemLabel="{!$Label.UseCustomSessionMapping}" />
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:outputPanel id="opCustomMapping">
+                <apex:pageBlockSection title="Object Mapping" rendered="{!usecustomobjectmapping}">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel id="lblSobjectList" value="{!$Label.WriteToObject}" />
+                        <apex:selectlist id="slSobject" value="{!settings.logmein__selectedpostobjectmapping__c}"
+                            multiselect="false" size="1">
+                            <apex:selectoptions value="{!SobjectList}" />
+                            <apex:actionsupport event="onchange" rerender="opPostFieldMapping,opCustomMapping"
+                                status="status" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    
+                    <!-- future use 
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel id="lblUpsertFieldList" value="{!$Label.UniqueFieldForRecordMapping}" />
+                        <apex:selectlist id="slUpsertField" value="{!settings.selectedupsertfieldmapping__c}"
+                            multiselect="false" size="1">
+                            <apex:selectoptions value="{!UpsertPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    -->
+                    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputpanel id="opPostFieldMapping">
+                <apex:pageBlockSection title="Session Data Fields" rendered="{!usecustomobjectmapping}">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSessionIdMapping" value="{!$Label.SessionId}" />
+                        <apex:selectlist id="slPostSessionIdMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsessionidmapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSessionIdMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostCfield0Mapping" value="{!$Label.CustomerName}" />
+                        <apex:selectlist id="slPostCField0Mapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield0mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostCfield0Mapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostChatLogMapping" value="{!$Label.ChatLog}" />
+                        <apex:selectlist id="slPostChatLogMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedchatlogmapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostChatLogMapping" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostFieldMapping1" value="{!$Label.CustomField1}" />
+                        <apex:selectlist id="slPostFieldMapping1" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield1mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostFieldMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostTechIdMapping" value="{!$Label.TechnicianId}" />
+                        <apex:selectlist id="slPostTechIdMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedtechidmapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostTechIdMapping" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostFieldMapping2" value="{!$Label.CustomField2}" />
+                        <apex:selectlist id="slPostFieldMapping2" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield2mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostFieldMapping2" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostTechNameMapping" value="{!$Label.TechnicianName}" />
+                        <apex:selectlist id="slPostTechNameMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedtechnamemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostTechNameMapping" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostFieldMapping3" value="{!$Label.CustomField3}" />
+                        <apex:selectlist id="slPostFieldMapping3" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield3mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostFieldMapping3" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostTechEmailMapping" value="{!$Label.TechnicianEmail}" />
+                        <apex:selectlist id="slPostTechEmailMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedtechemailmapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostTechEmailMapping" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostFieldMapping4" value="{!$Label.CustomField4}" />
+                        <apex:selectlist id="slPostFieldMapping4" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield4mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostFieldMapping4" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostPickupTimeMapping" value="{!$Label.SessionPickupTime}" />
+                        <apex:selectlist id="slPostPickupTimeMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpickuptimemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostPickupTimeMapping" value="{!DateTimeUrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostFieldMapping5" value="{!$Label.CustomField5}" />
+                        <apex:selectlist id="slPostFieldMapping5" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedpostcfield5mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostFieldMapping5" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostClosingTimeMapping" value="{!$Label.SessionClosingTime}" />
+                        <apex:selectlist id="slPostClosingTimeMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedclosingtimemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostClosingTimeMapping" value="{!DateTimeUrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostLastActionTimeMapping" value="{!$Label.LastActionTime}" />
+                        <apex:selectlist id="slPostLastActionTimeMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedlastactiontimemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostLastActionTimeMapping" value="{!DateTimeUrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostWaitingTimeMapping" value="{!$Label.WaitingTime}" />
+                        <apex:selectlist id="slPostWaitingTimeMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedwaitingtimemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostWaitingTimeMapping" value="{!NumberUrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostWorkTimeMapping" value="{!$Label.WorkTime}" />
+                        <apex:selectlist id="slPostWorkTimeMapping" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedworktimemapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostWorkTimeMapping" value="{!NumberUrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Technician Survey Fields" rendered="{!usecustomobjectmapping}">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping0" value="{!$Label.TechSurveyField0}" />
+                        <apex:selectlist id="slPostSurveyMapping0" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield0mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping0" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping1" value="{!$Label.TechSurveyField1}" />
+                        <apex:selectlist id="slPostSurveyMapping1" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield1mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping2" value="{!$Label.TechSurveyField2}" />
+                        <apex:selectlist id="slPostSurveyMapping2" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield2mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping3" value="{!$Label.TechSurveyField3}" />
+                        <apex:selectlist id="slPostSurveyMapping3" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield3mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping4" value="{!$Label.TechSurveyField4}" />
+                        <apex:selectlist id="slPostSurveyMapping4" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield4mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping1" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping5" value="{!$Label.TechSurveyField5}" />
+                        <apex:selectlist id="slPostSurveyMapping5" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield5mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping5" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping6" value="{!$Label.TechSurveyField6}" />
+                        <apex:selectlist id="slPostSurveyMapping1" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield6mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping6" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping7" value="{!$Label.TechSurveyField7}" />
+                        <apex:selectlist id="slPostSurveyMapping7" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield7mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping7" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping8" value="{!$Label.TechSurveyField8}" />
+                        <apex:selectlist id="slPostSurveyMapping8" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield8mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping8" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputlabel id="lPostSurveyMapping9" value="{!$Label.TechSurveyField9}" />
+                        <apex:selectlist id="slPostSurveyMapping9" title="{!$Label.help_PostFieldMapping}"
+                            value="{!settings.logmein__selectedsurveyfield9mapping__c}" multiselect="false" size="1">
+                            <apex:selectoptions id="soPostSurveyMapping9" value="{!UrlPostFields}" />
+                        </apex:selectlist>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputpanel>
+        </apex:pageBlock>
+
+        <!-- end end of session data mapping -->    
+    
+        <!-- start Rescue Channels section -->
+        
+        <apex:pageBlock id="pbChannels" title="{!$Label.RescueInstantChat}" rendered="{!showorgsettings}"
+            helpTitle="{!$Label.help_helponthissection}" helpUrl="{!$Page.logmein__RescueIntegrationSettingsHelp}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton id="btnRefreshChannels" action="{!refreshChannels}"
+                    rerender="slChannelsList,messages" status="status" value="{!$Label.SyncChannels}" />
+                <apex:commandButton id="btnUpdateChannel" action="{!updateChannel}"
+                    reRender="messages, pbsFieldMapping" status="status" value="{!$Label.UpdateChannelSettings}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection id="pbsChannelSelect">
+                <apex:pageBlockSectionItem helpText="{!$Label.help_ChannelSelect}">
+                    <apex:outputLabel id="lblChannelSelect" value="{!$Label.ModifyChannel}" escape="false" />
+                    <apex:actionRegion >
+                        <apex:selectList id="slChannelsList" value="{!selectedchannel}" multiselect="false" size="1">
+                            <apex:actionSupport id="asChannelsList" event="onchange" status="status"
+                                rerender="messages,opChannelSettings" />
+                            <apex:selectOptions id="soChannelsList" value="{!ChannelsList}" />
+                        </apex:selectList>
+                    </apex:actionRegion>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <br />
+            <apex:outputPanel id="opChannelSettings">
+                <apex:outputPanel id="opChannelSettingsInner" rendered="{!ShowChannelOptions}">
+                    <apex:pageBlockSection id="pbsFieldMapping" collapsible="false"
+                        title="Instant Chat Field Mapping">
+                        <apex:pageBlockSectionItem id="pbsiCF1" helpText="{!$Label.help_CustomFieldMapping}">
+                            <apex:outputLabel id="lblCField1" value="{!$Label.CustomFieldMapping}" />
+                            <apex:selectlist id="slcfield1" value="{!Channel.logmein__CField1_Map__c}" multiselect="false" size="1">
+                                <apex:selectoptions value="{!caseFieldList}" />
+                                <apex:actionsupport status="status" event="onchange" rerender="chkCfield1"
+                                    oncomplete="checkBoxes(this.id)" />
+                            </apex:selectlist>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF1a" helpText="{!$Label.help_CustomFieldEnable}">
+                            <apex:outputLabel id="lblCField1Map" value="{!$Label.Enable}" />
+                            <apex:inputCheckbox id="chkCfield1" value="{!Channel.logmein__Show_CField1__c}"
+                                disabled="{!IF(Channel.logmein__CField1_Map__c == '',true,false)}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF2" helpText="{!$Label.help_CustomFieldMapping}">
+                            <apex:outputLabel id="lblCField2" value="{!$Label.CustomField2Mapping}" />
+                            <apex:selectlist id="slcfield2" value="{!Channel.logmein__CField2_Map__c}" multiselect="false" size="1">
+                                <apex:selectoptions value="{!caseFieldList}" />
+                                <apex:actionsupport status="status" event="onchange" rerender="chkCfield2"
+                                    oncomplete="checkBoxes(this.id)" />
+                            </apex:selectlist>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF2a" helpText="{!$Label.help_CustomFieldEnable}">
+                            <apex:outputLabel id="lblCField2Map" value="{!$Label.Enable}" />
+                            <apex:inputCheckbox id="chkCfield2" value="{!Channel.logmein__Show_CField2__c}"
+                                disabled="{!IF(Channel.logmein__CField2_Map__c== " ",true,false)}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_CustomFieldMapping}">
+                            <apex:outputLabel id="lblCField3" value="{!$Label.CustomField3Mapping}" />
+                            <apex:selectlist id="slcfield3" value="{!Channel.logmein__CField3_Map__c}" multiselect="false" size="1">
+                                <apex:selectoptions value="{!caseFieldList}" />
+                                <apex:actionsupport status="status" event="onchange" rerender="chkCfield3"
+                                    oncomplete="checkBoxes(this.id)" />
+                            </apex:selectlist>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF3a" helpText="{!$Label.help_CustomFieldEnable}">
+                            <apex:outputLabel id="lblCField3Map" value="{!$Label.Enable}" />
+                            <apex:inputCheckbox id="chkCfield3" value="{!Channel.logmein__Show_CField3__c}"
+                                disabled="{!IF(Channel.logmein__CField3_Map__c == " ",true,false)}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_CustomFieldMapping}">
+                            <apex:outputLabel id="lblCField4" value="{!$Label.CustomField4Mapping}" />
+                            <apex:selectlist id="slcfield4" value="{!Channel.logmein__CField4_Map__c}" multiselect="false" size="1">
+                                <apex:selectoptions value="{!caseFieldList}" />
+                                <apex:actionsupport status="status" event="onchange" rerender="chkCfield4"
+                                    oncomplete="checkBoxes(this.id)" />
+                            </apex:selectlist>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF4a" helpText="{!$Label.help_CustomFieldEnable}">
+                            <apex:outputLabel id="lblCField4Map" value="{!$Label.Enable}" />
+                            <apex:inputCheckbox id="chkCfield4" value="{!Channel.logmein__Show_CField4__c}"
+                                disabled="{!IF(Channel.logmein__CField4_Map__c == " ",true,false)}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_CustomFieldMapping}">
+                            <apex:outputLabel id="lblCField5" value="{!$Label.CustomField5Mapping}" />
+                            <apex:selectlist id="slcfield5" value="{!Channel.logmein__CField5_Map__c}" multiselect="false" size="1">
+                                <apex:selectoptions value="{!caseFieldList}" />
+                                <apex:actionsupport status="status" event="onchange" rerender="chkCfield5"
+                                    oncomplete="checkBoxes(this.id)" />
+                            </apex:selectlist>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem id="pbsiCF5a" helpText="{!$Label.help_CustomFieldEnable}">
+                            <apex:outputLabel id="lblCField5Map" value="{!$Label.Enable}" />
+                            <apex:inputCheckbox id="chkCfield5" value="{!Channel.logmein__Show_CField5__c}"
+                                disabled="{!IF(Channel.logmein__CField5_Map__c == " ",true,false)}"/>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection id="pbsChannelSettings" collapsible="false"
+                        title="When no technician is available">
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_ShowNoTechMessage}">
+                            <apex:outputLabel id="lblShowNoTechMessage" value="{!$Label.ShowNoTechAvailableMessage}" />
+                            <apex:inputCheckbox id="chkShowNoTechMessage" value="{!Channel.logmein__Show_No_Tech_Message__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helptext="{!$Label.help_InsertCaseWhenNoTechAvailable}">
+                            <apex:outputLabel id="lblInsertCaseWhenNoTechAvailable"
+                                value="{!$Label.InsertCaseWhenNoTech}" />
+                            <apex:inputCheckbox id="chkInsertTicketWhenNoTechAvailable"
+                                value="{!channel.logmein__Submit_Case_if_No_Tech__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_RedirectIfNoTech}">
+                            <apex:outputLabel id="lblRedirectIfNoTech" value="{!$Label.RedirectIfNoTech}" />
+                            <apex:inputField id="txtRedirectIfNoTech" value="{!channel.logmein__Redirect_If_No_Tech__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_ExcludeAwayAndBusy}">
+                            <apex:outputLabel id="lblExcludeAwayAndBusy"
+                                value="{!$Label.ExcludeAwayAndBusy}" />
+                            <apex:inputCheckbox id="txtExcludeAwayAndBusy" value="{!channel.logmein__ExcludeAwayAndBusy__c}" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_ChannelStatusCacheTimeout}">
+                            <apex:outputLabel id="lblChannelStatusCacheTimeout" value="{!$Label.ChannelStatusCacheTimeout}" />
+                            <apex:inputField id="txtChannelStatusCacheTimeout"
+                                value="{!channel.logmein__ChannelStatusCacheTimeout__c}" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <apex:pageBlockSection id="pbsChatCode" collapsible="true" title="Instant Chat Embed Code">
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_ChannelFormLink}">
+                            <apex:outputLabel id="lblChatFormLink" value="{!$Label.CodeToEmbedFormLink}" />
+                            <apex:inputTextArea id="txtChatFormLinke" value="{!chatLinkCode}"
+                                style="width: 500px; height: 50px;" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputlabel value="&nbsp;" escape="false" />
+                            <apex:outputlabel value="&nbsp;" escape="false" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem helpText="{!$Label.help_ChannelImageCode}">
+                            <apex:outputLabel id="lblChatImageCode" value="{!$Label.CodeToEmbedStatusImage}" />
+                            <apex:inputTextArea id="txtChatImageCode" value="{!chatImageCode}"
+                                style="width: 500px; height: 50px;" />
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputlabel value="&nbsp;" escape="false" />
+                            <apex:outputlabel value="&nbsp;" escape="false" />
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        
+        <!-- end Rescue Channels section -->
+
+
+
+    </apex:form>
+    <c:Rescue_AjaxWorkingIconWhite />
+</apex:page>

@@ -1,0 +1,122 @@
+<apex:page showHeader="false" controller="logmein.RescueInstantChatCon" action="{!redirect}" id="rescueICPage" standardStylesheets="false" title="Rescue Instant Chat">
+	<head>
+		<apex:includeScript value="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx" />
+		<apex:includeScript value="{!URLFOR($Resource.logmein__RescueInstantChat, '/jquery1_4.js')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.logmein__RescueInstantChat, '/RescueInstantChatFormCSS.css')}" />
+		<title>Rescue Instant Chat</title>
+	</head>
+	<body onload="handleRebootOrRefresh()">
+		<apex:outputPanel id="opTracking">
+			<script type="text/javascript">
+				var tracking0 = '{!CaseId}';
+				var channel = '{!JSENCODE(FormFields.Channel__c)}';
+				var nm = '{!JSENCODE(sName)}';
+				var eml = '{!JSENCODE(sEmail)}';
+				var desc = '{!JSENCODE(sDescription)}';
+				var bShowForm = '{!ShowForm}';
+				var cFieldOne = '{!sCField1}';
+			    var cFieldTwo = '{!sCField2}';
+			    var cFieldThree = '{!sCField3}';
+			    var cFieldFour = '{!sCField4}';
+			    var cFieldFive = '{!sCField5}';
+			</script>
+		</apex:outputPanel>
+		<apex:outputpanel id="mainPanel" styleClass="main">
+			<script type="text/javascript">
+				/*var channel = '{!JSENCODE(FormFields.Channel__c)}';
+				var nm = '{!JSENCODE(sName)}';
+				var eml = '{!JSENCODE(sEmail)}';
+				var desc = '{!JSENCODE(sDescription)}';
+				var bShowForm = '{!ShowForm}';*/
+				
+				$(document).ready(function(){
+					var btn = document.getElementById("rescueICPage:rescueForm:commandButtonStartChat");
+					$(btn).addClass('hide');
+					validate();
+					if(nm != '' && nm != null && eml != '' && eml != null && desc != '' && desc != null){
+						btn.click();
+					}
+				});
+				function validate(){
+					var btn = document.getElementById("rescueICPage:rescueForm:commandButtonStartChat");
+					var filter = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+					if($('#txtnm').children().val() != '' && $('#txteml').children().val() != '' && $('#txtdscrptn').children().val() != '' && filter.test($('#txteml').children().val()) == true){
+						$('#btnDisabled').hide();
+						$(btn).removeClass('hide');
+					}
+					else{
+						$('#btnDisabled').show();
+						$(btn).addClass('hide');
+					}
+				}
+				function startChat(){
+					$('#ICContainer').removeClass('hide');
+					$('.opNoTech').addClass('hide');
+					$('.ldrimg').removeClass('hide');
+					$('.opForm').addClass('hide');
+				}
+				function loadInstantChat(){
+					$('.opForm').addClass('hide');
+					$('.ldrimg').addClass('hide');
+				    var serverprotocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+				    var ICLoader = new RescueInstantChatLoader();
+				    ICLoader.ICContainer = "ICContainer";
+				    ICLoader.HostedCSS = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'InstantChat.css')}";
+				    ICLoader.HostedLanguagesForChatOnlyMode = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'LanguagesForChatOnlyMode.js')}";
+				    //ICLoader.HostedLanguagesForAppletMode = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'LanguagesForAppletMode.js')}";
+				    ICLoader.EntryID = channel;
+				    ICLoader.Name = nm;
+			    	ICLoader.Comment1 = cFieldOne;
+			    	ICLoader.Comment2 = cFieldTwo;
+			    	ICLoader.Comment3 = cFieldThree;
+			    	ICLoader.Comment4 = cFieldFour;
+			    	ICLoader.Comment5 = cFieldFive;
+				    ICLoader.Tracking0 = tracking0;
+				    ICLoader.Language = "{!lang}";
+				    ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+				    
+				    ICLoader.Start();
+				}
+				function handleRebootOrRefresh(){
+				    if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+				    if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+				} 
+			</script>
+			<apex:form id="rescueForm">
+				<span class="ldrimg hide"></span>
+				<apex:outputpanel id="mainPanelForm" rendered="{!ShowForm}" styleClass="opForm">
+					<div class="opForm">
+						<div id="divLbl" class="divLbl">
+							<div class="lblnm"><apex:outputLabel id="outputLabelName" value="{!$ObjectType.Case.Fields.SuppliedName.Label}:" styleClass="lbl" /></div>
+							<div class="lbleml"><apex:outputLabel id="outputLabelEmail" value="{!$ObjectType.Case.Fields.SuppliedEmail.Label}:"  styleClass="lbl" /></div>
+							<div class="lblcf1"><apex:outputLabel id="outputLabelCField1" value="{!$Label.RescueInstantChatFormCField1}:" rendered="{!FormFields.logmein__Show_CField1__c}" styleClass="lbl" /></div>
+							<div class="lblcf2"><apex:outputLabel id="outputLabelCField2" value="{!$Label.RescueInstantChatFormCField2}:" rendered="{!FormFields.logmein__Show_CField2__c}" styleClass="lbl" /></div>
+							<div class="lblcf3"><apex:outputLabel id="outputLabelCField3" value="{!$Label.RescueInstantChatFormCField3}:" rendered="{!FormFields.logmein__Show_CField3__c}" styleClass="lbl" /></div>
+							<div class="lblcf4"><apex:outputLabel id="outputLabelCField4" value="{!$Label.RescueInstantChatFormCField4}:" rendered="{!FormFields.logmein__Show_CField4__c}" styleClass="lbl" /></div>
+							<div class="lblcf5"><apex:outputLabel id="outputLabelCField5" value="{!$Label.RescueInstantChatFormCField5}:" rendered="{!FormFields.logmein__Show_CField5__c}" styleClass="lbl" /></div>
+							<div class="lbldscrptn"><apex:outputLabel id="outputLabelDescription" value="{!$ObjectType.Case.Fields.Description.Label}:" styleClass="lbl" /></div>
+						</div>
+						<div id="divInpt" class="divInpt">
+							<div id="txtnm"><apex:inputtext value="{!sName}" id="inputValueName" onkeyup="validate()" styleClass="txtbx" disabled="{!bDisableName}" /></div>
+							<div id="txteml"><apex:inputtext value="{!sEmail}" id="inputValueEmail" onkeyup="validate()" styleClass="txtbx" disabled="{!bDisableEmail}" /></div>
+							<div><apex:inputText value="{!sCField1}" id="inputValueCF1" maxLength="{!CField1Max}" rendered="{!FormFields.logmein__Show_CField1__c}" styleClass="txtbx" disabled="{!bDisableCField1}" /></div>
+							<div><apex:inputtext value="{!sCField2}" id="inputValueCF2" maxLength="{!CField2Max}" rendered="{!FormFields.logmein__Show_CField2__c}" styleClass="txtbx" disabled="{!bDisableCField2}" /></div>
+							<div><apex:inputtext value="{!sCField3}" id="inputValueCF3" maxLength="{!CField3Max}" rendered="{!FormFields.logmein__Show_CField3__c}" styleClass="txtbx" disabled="{!bDisableCField3}" /></div>
+							<div><apex:inputtext value="{!sCField4}" id="inputValueCF4" maxLength="{!CField4Max}" rendered="{!FormFields.logmein__Show_CField4__c}" styleClass="txtbx" disabled="{!bDisableCField4}" /></div>
+							<div><apex:inputtext value="{!sCField5}" id="inputValueCF5" maxLength="{!CField5Max}" rendered="{!FormFields.logmein__Show_CField5__c}" styleClass="txtbx" disabled="{!bDisableCField5}" /></div>
+							<div id="txtdscrptn"><apex:inputtextarea value="{!sDescription}" id="inputValueDescription" onkeyup="validate()" styleClass="txtarea" disabled="{!bDisableDescription}" /></div>
+							<span class="divbtn"><input id="btnDisabled" disabled="disabled" value="Start Chat" type="button" /><apex:commandButton id="commandButtonStartChat" action="{!submitCase}" reRender="rescueForm,opTracking" value="Start Chat" onclick="startChat()" oncomplete="loadInstantChat()" styleClass="btn" /></span>
+						</div>
+					</div>
+				</apex:outputpanel>
+				<apex:outputpanel id="mainPanelNoTech" rendered="{!ShowNoTechMessage}">
+					<div class="lblerr">
+						<apex:outputLabel id="outputLabelNoTechMsg" value="{!$Label.NoTechLabel}" />
+					</div>
+				</apex:outputpanel>
+			</apex:form>
+			<apex:pageMessages id="messages" />
+		</apex:outputpanel>
+		<div id="ICContainer" style="margin:2px 0px 0px 2px; width: 353px; height: 454px;" class="hide"></div>
+	</body>
+</apex:page>

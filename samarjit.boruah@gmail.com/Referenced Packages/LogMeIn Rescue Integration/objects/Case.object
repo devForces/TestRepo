@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Autoclosed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Autoclosed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCIL_Product2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE( Product__c , 
+&quot;LogMeIn Free&quot;, &quot;lmifree&quot;, 
+&quot;LogMeIn Pro&quot;, &quot;lmipro&quot;, 
+&quot;LogMeIn Pro2&quot;, &quot;lmipro2&quot;, 
+&quot;LogMeIn IT Reach&quot;, &quot;lmiitreach&quot;, 
+&quot;LogMeIn Rescue&quot;, &quot;lmirescue&quot;, 
+&quot;LogMeIn Backup&quot;, &quot;lmibackup&quot;, 
+&quot;LogMeIn Hamachi&quot;, &quot;lmihamachi&quot;, 
+&quot;LogMeIn Hamachi2&quot;, &quot;lmihamachi2&quot;, 
+&quot;LogMeIn Ignition&quot;, &quot;lmiignition&quot;, 
+&quot;RemotelyAnywhere&quot;, &quot;remotelyanywhere&quot;, 
+&quot;Network Console&quot;, &quot;networkconsole&quot;, 
+&quot;LogMeIn Rescue+Mobile&quot;, &quot;lmirescuemobile&quot;, 
+&quot;LogMeIn Ignition for iPhone&quot;, &quot;lmiignitioniphone&quot;, 
+&quot;LogMeIn Central&quot;, &quot;lmicentral&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CCIL Product2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ContactEmail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DirectEmail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DirectEmail</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EmailHeaders__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>EmailHeaders</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EngineeringReqNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Engineering Req Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HourLastModified__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>if((VALUE( MID(TEXT( LastModifiedDate), 12, 2) ) - 4) &lt; 0, (VALUE( MID(TEXT( LastModifiedDate), 12, 2) )) - 4 + 24, (VALUE( MID(TEXT( LastModifiedDate), 12, 2) )) - 4 )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HourLastModified</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HourOpened__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>if((VALUE( MID(TEXT(  CreatedDate  ), 12, 2) ) - 4) &lt; 0, (VALUE( MID(TEXT(  CreatedDate  ), 12, 2) )) - 4 + 24, (VALUE( MID(TEXT(  CreatedDate  ), 12, 2) )) - 4 )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HourOpened</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jira__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Add the URL to the JIRA ticket created for this Escalation.</inlineHelpText>
+        <label>JIRA URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Last_Mod_Day_of_Week__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE(MOD(DATEVALUE(LastModifiedDate) - DATE(1900, 1, 6), 7), 0, &quot;Saturday&quot;, 1, &quot;Sunday&quot;, 2, &quot;Monday&quot;, 3, &quot;Tuesday&quot;, 4, &quot;Wednesday&quot;, 5, &quot;Thursday&quot;, 6, &quot;Friday&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Mod Day of Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumberOfUpdates__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>NumberOfUpdates</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operating_System__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Operating System (Host)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Windows XP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Linux</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Windows 7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Windows Vista</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Windows 2000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Windows ME/98/NT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PotentialLiability__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Potential Liability</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>LogMeIn Rescue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Central</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Pro2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Backup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Hamachi2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Free</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Ignition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LogMeIn Ignition for iPhone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RA / NC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SLAViolation__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SLA Violation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Install</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>To_Reproduce__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a list of steps to reproduce the issue.  Be concise.</inlineHelpText>
+        <label>To Reproduce</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>lang__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>lang</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <webLinks>
+        <fullName>Rescue_PIN_VF</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Rescue PIN</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.open(&quot;/apex/logmein__rescuerequestpincode?caseid={!Case.Id}&quot;, &quot;rescuepin&quot;, &quot;menubar=0, status=1, toolbar=1, resizable=1, width=544, height=280&quot;);</url>
+    </webLinks>
+</CustomObject>

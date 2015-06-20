@@ -1,0 +1,152 @@
+<apex:page controller="logmein.RescueAPICon"
+	title="LogMeIn Rescue - Link Accounts" showHeader="false"
+	sidebar="false" id="page" action="{!initializeSettings}">
+	<head>
+	<title>LogMeIn Rescue – Remote Support</title>
+
+	<style type="text/css">
+body {
+	font-family: tahoma, arial, verdana
+}
+
+table,select {
+	font-family: tahoma, arial, verdana;
+	font-size: 11px
+}
+
+h1 {
+	font-size: 28px;
+	letter-spacing: -1px;
+	font-family: arial;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 0px
+}
+
+input {
+	font-size: 10pt;
+	font-family: arial
+}
+
+form {
+	margin: 0px
+}
+
+.label {
+	float: right;
+	margin-right: 8px;
+	font-weight: bold;
+}
+
+.textbox {
+	float: right;
+}
+
+.cmdbutton {
+	cell-padding: 10px;
+	margin-top: 10px;
+	float: right;
+}
+</style>
+	</head>
+
+	<body style="margin-top: 10px; margin-left: 10px;"
+		onLoad="page.form.email.focus();">
+
+	<table width="420" border="0" cellpadding="0" cellspacing="0"
+		style="border-top: 5px solid black; border-bottom: 5px solid black; border-left: 2px solid black; border-right: 2px solid black">
+		<tr>
+			<td>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" style="width: 150px; text-align: left">
+					<table cellpadding="0" cellspacing="0" width="150">
+						<tr>
+							<td valign="top"
+								style="padding-top: 6px; padding-left: 18px; width: 155px; height: 40px">
+							<apex:image value="{!URLFOR($Resource.logmein__Rescue_Resources, 'images/rescue_pwdby_new.gif')}"
+								alt="Powered by LogMeIn Rescue"
+								title="Powered by LogMeIn Rescue" /></td>
+							<td style="width: 25px" valign="top"><apex:image value="{!URLFOR($Resource.logmein__Rescue_Resources, 'images/tri.gif')}" />
+							</td>
+						</tr>
+					</table>
+					</td>
+					<td align="right" valign="top" style="width: 100%">
+					<table cellpadding="0" cellspacing="0"
+						style="height: 25px; background-color: Black" width="100%">
+
+						<tr>
+							<td style="padding-left: 3px; padding-right: 3px; width: 100%"
+								align="left"></td>
+							<td style="padding-left: 3px; padding-right: 3px" align="right">
+							<c:Rescue_AjaxWorkingIcon /></td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td style="padding-left: 20px; padding-bottom: 20px"><apex:form id="form">
+						<center>
+						<table>
+							<tr>
+								<td id="emaillabelspan"><apex:outputLabel id="emaillabel"
+									styleClass="label" value="LogMeIn Rescue Email" /></td>
+								<td id="emailtextspan"><apex:inputText id="email"
+									value="{!email}" styleClass="textbox"
+									title="LogMeIn Rescue Email" tabindex="1" /></td>
+							</tr>
+							<tr>
+								<td id="pwdlabelspan"><apex:outputLabel id="pwdlabel"
+									styleClass="label" value="LogMeIn Rescue Password" /></td>
+								<td id="pwdspan"><apex:inputSecret id="pwd" value="{!pwd}"
+									styleClass="textbox" title="LogMeIn Rescue Password"
+									tabindex="2" /></td>
+							</tr>
+
+							<tr>
+								<td colspan="2" align="right"><apex:commandButton styleClass="cmdbutton" id="submitbutton" value="Link Accounts"
+									action="{!linkAccounts}" reRender="messages" tabindex="4"
+									status="status" /> <apex:commandButton styleClass="cmdbutton"
+									id="clearauthcode" value="Unlink Accounts"
+									action="{!clearAuthCode}" reRender="messages" tabIndex="3"
+									status="status" /></td>
+							</tr>
+						</table>
+						</center>
+					</apex:form></td>
+
+				</tr>
+				<tr>
+					<td>
+					<div class="messageblock"><apex:pageMessages id="messages"
+						escape="false" /></div>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" border="0"
+				style="width: 100%; height: 20px; background-color: black; color: white">
+				<tr>
+
+					<td
+						style="padding-left: 20px; padding-bottom: 2px; white-space: nowrap; font-size: 8pt"
+						valign="bottom"><apex:outputLabel style="color: white;"
+						value="Copyright &copy; 2005-2009 LogMeIn, Inc. All rights reserved." />
+
+					</td>
+
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+	document.getElementById("page:form:email").focus();
+</script>
+
+	</body>
+
+</apex:page>

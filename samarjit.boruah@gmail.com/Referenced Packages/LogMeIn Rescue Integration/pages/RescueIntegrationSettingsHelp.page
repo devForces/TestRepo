@@ -1,0 +1,40 @@
+<apex:page controller="logmein.RescueIntegrationSettingsCon" tabStyle="Rescue_Settings__tab" showHeader="false" sidebar="false">
+<apex:pageBlock title="{!$Label.RescueLoginInfo}">
+	<p>
+		{!$Label.RescueLoginInfoText}
+	</p>
+</apex:pageBlock>
+<apex:pageBlock title="{!$Label.OrganizationSettings}" rendered="{!ShowOrgSettings}">
+	<p>
+			{!$Label.OrganizationSettingsText}
+	</p>
+</apex:pageBlock>
+<apex:pageBlock title="{!$Label.EndOfSessionMapping}" rendered="{!showOrgSettings}">
+	<p>
+		{!$Label.EndOfSessionMappingText}
+	</p>
+	<p>
+		<h3>{!$Label.UseDefault}</h3>
+	</p>
+	<P>
+		{!$Label.UseDefaultText}
+	</p>
+	<p>
+		<h3>{!$Label.UseCustomMapping}</h3>
+	</p>
+	<p>
+		{!$Label.UseCustomMappingText}
+	</p>
+</apex:pageBlock>
+<apex:pageBlock title="{!$Label.InstantChatChannels}" rendered="{!ShowOrgSettings}">
+	<p>
+		{!$Label.InstantChatChannelsText}
+	</p>
+	<p>
+		{!$Label.InstantChatChannelsTexta}
+	</p>
+	<p>
+		<apex:image url="{!URLFOR($Resource.logmein__Rescue_Resources, "images/siteurlexample.png")}" />
+	</p>
+</apex:pageBlock>
+</apex:page>

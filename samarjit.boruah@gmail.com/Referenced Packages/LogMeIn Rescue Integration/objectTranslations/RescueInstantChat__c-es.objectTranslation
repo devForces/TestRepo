@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- RescueInstantChat --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- RescueInstantChat --></value>
+    </caseValues>
+    <fields>
+        <label><!-- CField1 Map --></label>
+        <name>CField1_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- CField2 Map --></label>
+        <name>CField2_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- CField3 Map --></label>
+        <name>CField3_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- CField4 Map --></label>
+        <name>CField4_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- CField5 Map --></label>
+        <name>CField5_Map__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of milliseconds to cache the channel status before querying the Rescue service again. --></help>
+        <label><!-- ChannelStatusCacheTimeout --></label>
+        <name>ChannelStatusCacheTimeout__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExcludeAwayAndBusy --></label>
+        <name>ExcludeAwayAndBusy__c</name>
+    </fields>
+    <fields>
+        <help><!-- The last time the availability for technicians in this channel was checked. --></help>
+        <label><!-- LastAvailabilityCheck --></label>
+        <name>LastAvailabilityCheck__c</name>
+    </fields>
+    <fields>
+        <help><!-- The status of the availability of technicians in this channel. --></help>
+        <label><!-- LastAvailabilityStatus --></label>
+        <name>LastAvailabilityStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Redirect If No Tech --></label>
+        <name>Redirect_If_No_Tech__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show CField1 --></label>
+        <name>Show_CField1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show CField2 --></label>
+        <name>Show_CField2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show CField3 --></label>
+        <name>Show_CField3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show CField4 --></label>
+        <name>Show_CField4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show CField5 --></label>
+        <name>Show_CField5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show No Tech Message --></label>
+        <name>Show_No_Tech_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submit Case if No Tech --></label>
+        <name>Submit_Case_if_No_Tech__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

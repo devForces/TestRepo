@@ -1,0 +1,5 @@
+<apex:page controller="ExportViewController" >
+  <apex:repeat value="{!Opportunities}" var="opp">
+  <apex:outputText >{!opp.Name}</apex:outputText>
+  </apex:repeat>
+</apex:page>

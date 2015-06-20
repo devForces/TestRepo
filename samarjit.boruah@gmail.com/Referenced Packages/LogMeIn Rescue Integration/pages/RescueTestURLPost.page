@@ -1,0 +1,47 @@
+<apex:page >
+
+<script type="text/javascript" lang="javascript">
+function submitform(){	
+	var s = document.posttest.siteurl;
+	document.posttest.action = s.value;
+	//alert(s.value);
+	document.posttest.submit();}
+</script>
+
+<form name="posttest" action="#">
+Site URL: <input type="text" name="siteurl" id="siteurl"></input> (the sites URL to post to, required)<br />
+Case id: <input type="text" name="Tracking0" id="Tracking0"></input> (case id to test on, required)<br />
+SessionID: <input type="text" name="SessionID"></input> (7-10 digit number, required)<br />
+TechID: <input type="text" name="TechID"></input> (text id of technician, required)<br />
+TechName: <input type="text" name="TechName"></input> (text name of the technician, required)<br />
+TechSSOID: <input type="text" name="TechSSOID"></input> (text SSOID of technician, optional)<br />
+TechDescr: <input type="text" name="TechDescr"></input> (text description of technician, optional)<br />
+Customer Name: <input type="text" name="CField0"></input> (text customer name, required)<br />
+CField1: <input type="text" name="CField1"></input> (text cfield1, optional)<br />
+CField2: <input type="text" name="CField2"></input> (text cfield2, optional)<br />
+CField3: <input type="text" name="CField3"></input> (text, cfield3, optional)<br />
+CField4: <input type="text" name="CField4"></input> (text, cfield4, optional)<br />
+CField5: <input type="text" name="CField5"></input> (text, cfield5, optional)<br />
+Chat Log: <input type="textarea" name="ChatLog"></input> (text, chat log, required)<br />
+Notes: <input type="textarea" name="Notes"></input> (text notes, optional)<br />
+Waiting Time: <input type="text" name="WaitingTime"></input> (waiting time, in seconds, required)<br />
+Pickup Time: <input type="text" name="PickupTime"></input> (datetime pickup time, required, ex. 2010-02-02 19:24:33)<br />
+Closing Time: <input type="text" name="ClosingTime"></input> (datetime closing time, required, ex 2010-02-02 19:24:53)<br />
+Work Time: <input type="text" name="WorkTime"></input> (work time in seconds, required)<br />
+Last Action Time: <input type="text" name="LastActionTime"></input> (datetime last action time, required, ex 2010-02-02 19:24:53)<br />
+Transmitted Bytes: <input type="text" name="Transmitted"></input> (number of bytes transmitted, required)<br />
+TSurvey0: <input type="text" name="TSurvey0"></input> (tech survey text, optional)<br />
+TSurvey1: <input type="text" name="TSurvey1"></input> (tech survey text, optional)<br />
+TSurvey2: <input type="text" name="TSurvey2"></input> (tech survey text, optional)<br />
+TSurvey3: <input type="text" name="TSurvey3"></input> (tech survey text, optional)<br />
+TSurvey4: <input type="text" name="TSurvey4"></input> (tech survey text, optional)<br />
+TSurvey5: <input type="text" name="TSurvey5"></input> (tech survey text, optional)<br />
+TSurvey6: <input type="text" name="TSurvey6"></input> (tech survey text, optional)<br />
+TSurvey7: <input type="text" name="TSurvey7"></input> (tech survey text, optional)<br />
+TSurvey8: <input type="text" name="TSurvey8"></input> (tech survey text, optional)<br />
+TSurvey9: <input type="text" name="TSurvey9"></input> (tech survey text, optional)<br />
+
+<input type="submit" name="Submit" value="Test URL POST" onClick="javascript:submitform();"></input>
+</form>
+
+</apex:page>

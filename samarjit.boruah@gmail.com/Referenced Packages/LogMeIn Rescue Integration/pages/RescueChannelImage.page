@@ -1,0 +1,15 @@
+<apex:page controller="logmein.RescueChannelImageCon" action="{!refreshStatus}" showHeader="false" sidebar="false" id="page">
+<head>
+<script type="text/javascript">
+function launchChat(){
+	window.open("{!$Page.RescueInstantChatForm}?channel={!channel}","RescueChat","status=0,toolbar=0,scrollbars=0,resizable=0,menubar=0,width=357,height=458");
+}
+</script>
+</head>
+<bod>
+<apex:outputPanel id="opStartNow" onclick="launchChat()" rendered="{!status}">	
+	<apex:image url="{!URLFOR($Resource.logmein__Rescue_Resources, "images/chatavailable.png")}" alt="{!$Label.ChatNow}" />
+</apex:outputPanel>
+	<apex:image url="{!URLFOR($Resource.logmein__Rescue_Resources, "images/chatunavailable.png")}" alt="{!$Label.ChatUnavailable}" rendered="{!NOT(status)}" />
+</bod>
+</apex:page>

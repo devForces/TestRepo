@@ -1,0 +1,13 @@
+<apex:page standardController="Opportunity" recordSetVar="opportunities" tabStyle="Opportunity" extensions="CustomSetController" contenttype="application/x-excel#filename.xls">
+      <apex:pageBlock >
+      <apex:pageBlockTable value="{!opportunities}" var="opp" id="opp_table">
+                <apex:column value="{!opp.name}"/>
+                <apex:column headerValue="Stage">
+                    <apex:outputField value="{!opp.stageName}"/>
+                </apex:column>
+                <apex:column headerValue="Close Date">
+                    <apex:outputField value="{!opp.closeDate}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+       </apex:pageBlock> 
+</apex:page>

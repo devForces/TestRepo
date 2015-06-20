@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+endpointApiVersion=30.0
+endpointEnvironment=Production/Developer Edition
+endpointServer=www.salesforce.com
+httpsProtocol=true
+ideVersion=30.0
+keependpoint=false
+metadataFormatVersion=30.0
+namespacePrefix=
+packageName=unpackaged
+preferToolingDeployment=true
+projectIdentifier=IDE5272781496572136452
+readTimeout=400
+username=samarjit.boruah@gmail.com

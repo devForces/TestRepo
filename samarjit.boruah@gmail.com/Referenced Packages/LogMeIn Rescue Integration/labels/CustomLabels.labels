@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AttachChatLogAsAFile</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AttachChatLogAsAFile</shortDescription>
+        <value>Attach chat log as a file</value>
+    </labels>
+    <labels>
+        <fullName>Beta</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Beta</shortDescription>
+        <value>Beta</value>
+    </labels>
+    <labels>
+        <fullName>ChannelStatusCacheTimeout</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ChannelStatusCacheTimeout</shortDescription>
+        <value>Channel status cache timeout</value>
+    </labels>
+    <labels>
+        <fullName>ChatLog</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ChatLog</shortDescription>
+        <value>Chat Log</value>
+    </labels>
+    <labels>
+        <fullName>ChatNow</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ChatNow</shortDescription>
+        <value>Chat Now</value>
+    </labels>
+    <labels>
+        <fullName>ChatUnavailable</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ChatUnavailable</shortDescription>
+        <value>Chat Unavailable</value>
+    </labels>
+    <labels>
+        <fullName>CloseTicketAtSessionEnd</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CloseTicketAtSessionEnd</shortDescription>
+        <value>Close ticket at session end</value>
+    </labels>
+    <labels>
+        <fullName>CodeToEmbedFormLink</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CodeToEmbedFormLink</shortDescription>
+        <value>Code to embed form link</value>
+    </labels>
+    <labels>
+        <fullName>CodeToEmbedStatusImage</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CodeToEmbedStatusImage</shortDescription>
+        <value>Code to embed status image</value>
+    </labels>
+    <labels>
+        <fullName>CustomField1</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField1</shortDescription>
+        <value>Custom Field 1</value>
+    </labels>
+    <labels>
+        <fullName>CustomField2</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField2</shortDescription>
+        <value>Custom Field 2</value>
+    </labels>
+    <labels>
+        <fullName>CustomField2Mapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField2Mapping</shortDescription>
+        <value>Custom Field 2 Mapping</value>
+    </labels>
+    <labels>
+        <fullName>CustomField3</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField3</shortDescription>
+        <value>Custom Field 3</value>
+    </labels>
+    <labels>
+        <fullName>CustomField3Mapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField3Mapping</shortDescription>
+        <value>Custom Field 3 Mapping</value>
+    </labels>
+    <labels>
+        <fullName>CustomField4</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField4</shortDescription>
+        <value>Custom Field 4</value>
+    </labels>
+    <labels>
+        <fullName>CustomField4Mapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField4Mapping</shortDescription>
+        <value>Custom Field 4 Mapping</value>
+    </labels>
+    <labels>
+        <fullName>CustomField5</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField5</shortDescription>
+        <value>Session Pickup Time</value>
+    </labels>
+    <labels>
+        <fullName>CustomField5Mapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomField5Mapping</shortDescription>
+        <value>Custom Field 5 Mapping</value>
+    </labels>
+    <labels>
+        <fullName>CustomFieldMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomFieldMapping</shortDescription>
+        <value>Custom Field 1 Mapping</value>
+    </labels>
+    <labels>
+        <fullName>CustomerName</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CustomerName</shortDescription>
+        <value>Customer Name</value>
+    </labels>
+    <labels>
+        <fullName>DoNotRequireActiveTC</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DoNotRequireActiveTC</shortDescription>
+        <value>Do not require active Tech Console</value>
+    </labels>
+    <labels>
+        <fullName>Enable</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Enable</shortDescription>
+        <value>Enable</value>
+    </labels>
+    <labels>
+        <fullName>EndOfSessionMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EndOfSessionMapping</shortDescription>
+        <value>End of Session Data Mapping</value>
+    </labels>
+    <labels>
+        <fullName>EndOfSessionMappingText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EndOfSessionMappingText</shortDescription>
+        <value>This section is used to configure where you want the Rescue session data to be mapped to after a session completes.  You have two options/flows you can choose from for this.</value>
+    </labels>
+    <labels>
+        <fullName>Error_AuthCodeGenerationFailed</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_AuthCodeGenerationFailed</shortDescription>
+        <value>AuthCode generating failed</value>
+    </labels>
+    <labels>
+        <fullName>Error_ErrorGettingPINCode</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_ErrorGettingPINCode</shortDescription>
+        <value>Error getting PIN Code</value>
+    </labels>
+    <labels>
+        <fullName>Error_GeneratingEmailText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_GeneratingEmailText</shortDescription>
+        <value>Error generating email text</value>
+    </labels>
+    <labels>
+        <fullName>Error_HandlingRescueURLPost</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_HandlingRescueURLPost</shortDescription>
+        <value>Error handling Rescue URL Post:</value>
+    </labels>
+    <labels>
+        <fullName>Error_RescueAPIReturned</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_RescueAPIReturned</shortDescription>
+        <value>The Rescue API returned an error:</value>
+    </labels>
+    <labels>
+        <fullName>Error_RetrievingLoginURL</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_RetrievingLoginURL</shortDescription>
+        <value>Retrieving login URL failed.</value>
+    </labels>
+    <labels>
+        <fullName>Error_SendingEmailEnterValid</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_SendingEmailEnterValid</shortDescription>
+        <value>Error sending email.  Please enter a valid email address.</value>
+    </labels>
+    <labels>
+        <fullName>Error_SettingAuthCodeFailed</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_SettingAuthCodeFailed</shortDescription>
+        <value>Setting User RescueAuthCode__c failed</value>
+    </labels>
+    <labels>
+        <fullName>Error_UnableToCloseCase</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_UnableToCloseCase</shortDescription>
+        <value>Unable to close Case:</value>
+    </labels>
+    <labels>
+        <fullName>Error_UnableToFindUserWithEmail</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error_UnableToFindUserWithEmail</shortDescription>
+        <value>Unable to find a user with email:</value>
+    </labels>
+    <labels>
+        <fullName>ExcludeAwayAndBusy</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ExcludeAwayAndBusy</shortDescription>
+        <value>Exclude away and busy agents from channel</value>
+    </labels>
+    <labels>
+        <fullName>HelpGuideLink</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>HelpGuideLink</shortDescription>
+        <value>Need help? Check out the install guide</value>
+    </labels>
+    <labels>
+        <fullName>Info_CaseClosedSuccessfully</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Info_CaseClosedSuccessfully</shortDescription>
+        <value>Case closed successfully</value>
+    </labels>
+    <labels>
+        <fullName>Info_SessionDataPostedSuccessfully</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Info_SessionDataPostedSuccessfully</shortDescription>
+        <value>Session data posted successfully.</value>
+    </labels>
+    <labels>
+        <fullName>Initialize</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Initialize</shortDescription>
+        <value>Initialize</value>
+    </labels>
+    <labels>
+        <fullName>InsertCaseWhenNoTech</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InsertCaseWhenNoTech</shortDescription>
+        <value>Insert Case when no Technician is Available</value>
+    </labels>
+    <labels>
+        <fullName>InstantChatChannels</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InstantChatChannels</shortDescription>
+        <value>Instant Chat Channels</value>
+    </labels>
+    <labels>
+        <fullName>InstantChatChannelsText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InstantChatChannelsText</shortDescription>
+        <value>This section is used to configure your Instant Chat channels.  Once you configure/enable these initially in the Rescue Admin Center, click Sync Channels below to bring them into your Salesforce.com config.  You can then customize each channel to suit your needs.  See the Rescue Integration Install Guide for help enabling the Instant Chat portion of the integration.</value>
+    </labels>
+    <labels>
+        <fullName>InstantChatChannelsTexta</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>InstantChatChannelsTexta</shortDescription>
+        <value>The embed code section gives you sample code to embed a &amp;quot;Chat Now&amp;quot; button on your own web site.  This button is powered by your Salesforce instance and will allow your customers to start a chat with your technicians.  You can find your [SITE URL] in Setup &gt; Develop &gt; Sites (where you configured it as part of the install guide.</value>
+    </labels>
+    <labels>
+        <fullName>LastActionTime</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LastActionTime</shortDescription>
+        <value>Last Action Time</value>
+    </labels>
+    <labels>
+        <fullName>LocationToWriteSessionData</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LocationToWriteSessionData</shortDescription>
+        <value>Location to write session data</value>
+    </labels>
+    <labels>
+        <fullName>LookForCaseNumber</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>LookForCaseNumber</shortDescription>
+        <value>Look for Case Number in custom fields</value>
+    </labels>
+    <labels>
+        <fullName>ModifyChannel</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ModifyChannel</shortDescription>
+        <value>Modify Channel</value>
+    </labels>
+    <labels>
+        <fullName>NoTechLabel</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>NoTechLabel</shortDescription>
+        <value>Currently, no technicians are available to service your request.  Please, try again later.</value>
+    </labels>
+    <labels>
+        <fullName>OrganizationSettings</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OrganizationSettings</shortDescription>
+        <value>Organization Settings</value>
+    </labels>
+    <labels>
+        <fullName>OrganizationSettingsText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OrganizationSettingsText</shortDescription>
+        <value>This section is to configure global settings for the integration.  		Company ID is populated (but not yet saved) when an dministrator 		successfully initializes their user account above.  Single Sign On 		Password may be left blank unless you are updating it, but for security purposes, it will not show the currently stored value.</value>
+    </labels>
+    <labels>
+        <fullName>Production</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Production</shortDescription>
+        <value>Production</value>
+    </labels>
+    <labels>
+        <fullName>ReassignCaseOnSessionAccept</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ReassignCaseOnSessionAccept</shortDescription>
+        <value>Reassign case on Session accept</value>
+    </labels>
+    <labels>
+        <fullName>RedirectIfNoTech</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RedirectIfNoTech</shortDescription>
+        <value>Redirect to URL if unavailable</value>
+    </labels>
+    <labels>
+        <fullName>RemoteSupport</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RemoteSupport</shortDescription>
+        <value>Remote Support</value>
+    </labels>
+    <labels>
+        <fullName>RescueAccountEmail</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueAccountEmail</shortDescription>
+        <value>Rescue Account Email</value>
+    </labels>
+    <labels>
+        <fullName>RescueAccountsUnlinked</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueAccountsUnlinked</shortDescription>
+        <value>Your Rescue and Salesforce accounts have been unlinked.</value>
+    </labels>
+    <labels>
+        <fullName>RescueChannelSettingsUpdated</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueChannelSettingsUpdated</shortDescription>
+        <value>Channel settings updated</value>
+    </labels>
+    <labels>
+        <fullName>RescueChannelsSynchronized</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueChannelsSynchronized</shortDescription>
+        <value>Channels updated from the Rescue service</value>
+    </labels>
+    <labels>
+        <fullName>RescueCompanyId</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueCompanyId</shortDescription>
+        <value>Rescue Company ID</value>
+    </labels>
+    <labels>
+        <fullName>RescueCopyright</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueCopyright</shortDescription>
+        <value>Copyright © 2005-2011 LogMeIn, Inc. All rights reserved.</value>
+    </labels>
+    <labels>
+        <fullName>RescueEmailCode</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueEmailCode</shortDescription>
+        <value>Email Code</value>
+    </labels>
+    <labels>
+        <fullName>RescueEmailMessage</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueEmailMessage</shortDescription>
+        <value>Message</value>
+    </labels>
+    <labels>
+        <fullName>RescueEmailSentTo</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueEmailSentTo</shortDescription>
+        <value>Email sent to</value>
+    </labels>
+    <labels>
+        <fullName>RescueEmailTo</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueEmailTo</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>RescueInitializeSettingsException</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueInitializeSettingsException</shortDescription>
+        <value>Rescue org-level settings need to be initialized before the integration can be used.  Please contact your Salesforce admin for assistance.</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstance</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueInstance</shortDescription>
+        <value>Rescue Instance</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChat</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueInstantChat</shortDescription>
+        <value>Rescue Instant Chat</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChatFormCField1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RescueInstantChatFormCField1</shortDescription>
+        <value>Custom Field 1</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChatFormCField2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RescueInstantChatFormCField2</shortDescription>
+        <value>Custom Field 2</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChatFormCField3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RescueInstantChatFormCField3</shortDescription>
+        <value>Custom Field 3</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChatFormCField4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RescueInstantChatFormCField4</shortDescription>
+        <value>Custom Field 4</value>
+    </labels>
+    <labels>
+        <fullName>RescueInstantChatFormCField5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RescueInstantChatFormCField5</shortDescription>
+        <value>Custom Field 5</value>
+    </labels>
+    <labels>
+        <fullName>RescueLinkFooter</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueLinkFooter</shortDescription>
+        <value>Link is automatically attached to the email.</value>
+    </labels>
+    <labels>
+        <fullName>RescueLoginFailed</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueLoginFailed</shortDescription>
+        <value>Login failed, Please check your LogMeIn Rescue email and password.</value>
+    </labels>
+    <labels>
+        <fullName>RescueLoginInfo</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueLoginInfo</shortDescription>
+        <value>Rescue Login Info</value>
+    </labels>
+    <labels>
+        <fullName>RescueLoginInfoText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueLoginInfoText</shortDescription>
+        <value>This section is used to link your Salesforce.com and LogMeInRescue.com accounts.  Don&apos;t worry, if you don&apos;t do it here, you&apos;ll be prompted to do so the first time you use the integration.</value>
+    </labels>
+    <labels>
+        <fullName>RescueOrgSettingsSaved</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueOrgSettingsSaved</shortDescription>
+        <value>Organization settings saved successfully.</value>
+    </labels>
+    <labels>
+        <fullName>RescuePassword</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescuePassword</shortDescription>
+        <value>Rescue Password</value>
+    </labels>
+    <labels>
+        <fullName>RescueSessionDataMappingSaved</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueSessionDataMappingSaved</shortDescription>
+        <value>Session data mapping settings saved successfully</value>
+    </labels>
+    <labels>
+        <fullName>RescueSuccessfullyLinkedAccounts</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueSuccessfullyLinkedAccounts</shortDescription>
+        <value>Successfully linked accounts.  Please re-open this window to generate a PIN Code.</value>
+    </labels>
+    <labels>
+        <fullName>RescueSuccessfullyLinkedAccountsSetup</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueSuccessfullyLinkedAccountsSetup</shortDescription>
+        <value>Your accounts were successfully linked.</value>
+    </labels>
+    <labels>
+        <fullName>RescueTechConsoleRequired</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueTechConsoleRequired</shortDescription>
+        <value>The system is configured to require an active instance of the Tech Console in order to generate a PIN code.  Please start the Rescue Tech Console and try again.</value>
+    </labels>
+    <labels>
+        <fullName>RescueURLPostError</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RescueURLPostError</shortDescription>
+        <value>Error handling Rescue URL Post:</value>
+    </labels>
+    <labels>
+        <fullName>SSOPassword</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SSOPassword</shortDescription>
+        <value>Single Sign On Password</value>
+    </labels>
+    <labels>
+        <fullName>SaveMappingSettings</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SaveMappingSettings</shortDescription>
+        <value>Save Mapping Settings</value>
+    </labels>
+    <labels>
+        <fullName>SaveSettings</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SaveSettings</shortDescription>
+        <value>Save Settings</value>
+    </labels>
+    <labels>
+        <fullName>SessionClosingTime</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SessionClosingTime</shortDescription>
+        <value>Session Closing Time</value>
+    </labels>
+    <labels>
+        <fullName>SessionId</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SessionId</shortDescription>
+        <value>Session ID</value>
+    </labels>
+    <labels>
+        <fullName>SessionPickupTime</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SessionPickupTime</shortDescription>
+        <value>Session Pickup Time</value>
+    </labels>
+    <labels>
+        <fullName>ShowEmailPINLink</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ShowEmailPINLink</shortDescription>
+        <value>Show Email PIN link</value>
+    </labels>
+    <labels>
+        <fullName>ShowNoTechAvailableMessage</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ShowNoTechAvailableMessage</shortDescription>
+        <value>Show No Tech Available Message</value>
+    </labels>
+    <labels>
+        <fullName>SyncChannels</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SyncChannels</shortDescription>
+        <value>Sync Channels</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField0</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField0</shortDescription>
+        <value>Tech Survey Field 0</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField1</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField1</shortDescription>
+        <value>Tech Survey Field 1</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField2</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField2</shortDescription>
+        <value>Tech Survey Field 2</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField3</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField3</shortDescription>
+        <value>Tech Survey Field 3</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField4</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField4</shortDescription>
+        <value>Tech Survey Field 4</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField5</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField5</shortDescription>
+        <value>Tech Survey Field 5</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField6</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField6</shortDescription>
+        <value>Tech Survey Field 6</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField7</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField7</shortDescription>
+        <value>Tech Survey Field 7</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField8</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField8</shortDescription>
+        <value>Tech Survey Field 8</value>
+    </labels>
+    <labels>
+        <fullName>TechSurveyField9</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechSurveyField9</shortDescription>
+        <value>Tech Survey Field 9</value>
+    </labels>
+    <labels>
+        <fullName>TechnicianEmail</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechnicianEmail</shortDescription>
+        <value>Technician Email</value>
+    </labels>
+    <labels>
+        <fullName>TechnicianId</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechnicianId</shortDescription>
+        <value>Technician ID</value>
+    </labels>
+    <labels>
+        <fullName>TechnicianName</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TechnicianName</shortDescription>
+        <value>Technician Name</value>
+    </labels>
+    <labels>
+        <fullName>UpdateChannelSettings</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UpdateChannelSettings</shortDescription>
+        <value>Update Channel Settings</value>
+    </labels>
+    <labels>
+        <fullName>UseCustomMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseCustomMapping</shortDescription>
+        <value>Use custom object mapping</value>
+    </labels>
+    <labels>
+        <fullName>UseCustomMappingText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseCustomMappingText</shortDescription>
+        <value>Custom object mapping gives you full flexibility on where you map Rescue session data and which fields in Rescue you want to map back to Salesforce fields.  With this flow, you need to specify every field you want to map back to Salesforce, including unique identifiers like lookup relationship ID values if the object you are mapping to needs to map to other objects.  This flow will insert/update records into the object you specify, so care should be taken to ensure that you provide the index-able values in the mapping.  Otherwise, you may end up with duplicate data.</value>
+    </labels>
+    <labels>
+        <fullName>UseCustomSessionMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseCustomSessionMapping</shortDescription>
+        <value>Use custom object mapping (Advanced)</value>
+    </labels>
+    <labels>
+        <fullName>UseDefault</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseDefault</shortDescription>
+        <value>Use default</value>
+    </labels>
+    <labels>
+        <fullName>UseDefaultSessionMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseDefaultSessionMapping</shortDescription>
+        <value>Use default (Existing Case w/Activity)</value>
+    </labels>
+    <labels>
+        <fullName>UseDefaultText</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UseDefaultText</shortDescription>
+        <value>This option maps session data back to the Case the session was created from.  This flow works if you only need to map sessions back to Cases where the session was started via the Rescue PIN button that is included/based on the Rescue integration.  If you need to map session data back for Channel-based sessions (no PIN code used), please use the Custom mapping flow.</value>
+    </labels>
+    <labels>
+        <fullName>WaitingTime</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>WaitingTime</shortDescription>
+        <value>Waiting Time</value>
+    </labels>
+    <labels>
+        <fullName>WorkTime</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>WorkTime</shortDescription>
+        <value>Work Time</value>
+    </labels>
+    <labels>
+        <fullName>WriteToObject</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>WriteToObject</shortDescription>
+        <value>Write to Object</value>
+    </labels>
+    <labels>
+        <fullName>help_APIHost</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_APIHost</shortDescription>
+        <value>The host that should be used when connecting the the Rescue API. Only change this if your company is using Beta features for the Tech Console or Customer Applet.</value>
+    </labels>
+    <labels>
+        <fullName>help_AttachChatAsFile</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_AttachChatAsFile</shortDescription>
+        <value>This setting saves the chat log as an attachment to the case rather than to the description field of the task that is created. If your chat sessions are usually lengthy, we recommend enabling this.</value>
+    </labels>
+    <labels>
+        <fullName>help_ChannelFormLink</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ChannelFormLink</shortDescription>
+        <value>This code allows you to embed a link on your website to direct customers to your Instant Chat form.  Be sure to modify [SITE URL] to match your Force.com Site config.</value>
+    </labels>
+    <labels>
+        <fullName>help_ChannelImageCode</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ChannelImageCode</shortDescription>
+        <value>You can paste this code in your own website to embed an image that allows your customers to start a chat session.  Be sure to change [SITE URL] to match your Force.com Site config and that the RescueChannelImage Visualforce page has been added to the Site.</value>
+    </labels>
+    <labels>
+        <fullName>help_ChannelSelect</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ChannelSelect</shortDescription>
+        <value>Select a Rescue Channel to customize.  Click Sync Channels to refresh the list with your company&apos;s Rescue Channels.</value>
+    </labels>
+    <labels>
+        <fullName>help_ChannelStatusCacheTimeout</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ChannelStatusCacheTimeout</shortDescription>
+        <value>To optimize for performance, the Channel image code will cache the Channel&apos;s status up to this amount of time.  Enter time in milliseconds.</value>
+    </labels>
+    <labels>
+        <fullName>help_CloseOnSessionEnd</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_CloseOnSessionEnd</shortDescription>
+        <value>This setting will enable automatic Case closure after writing the Rescue session data. This is useful for integrations using Channels where the agent does not need to interact with the Case at all, but reporting is still desired.  We recommend using this in conjuntion with &quot;Assign on session start&quot; to ensure Cases are owned by the proper agent when closed.  This does not bypass any validation rules.</value>
+    </labels>
+    <labels>
+        <fullName>help_CompanyID</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_CompanyID</shortDescription>
+        <value>The Company ID for the Rescue account. This is retrieved when you click Initialize above.</value>
+    </labels>
+    <labels>
+        <fullName>help_CustomFieldEnable</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_CustomFieldEnable</shortDescription>
+        <value>Choose whether to show this custom field in the Instant Chat form.</value>
+    </labels>
+    <labels>
+        <fullName>help_CustomFieldMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_CustomFieldMapping</shortDescription>
+        <value>Enter a field name related to the Case object.  Remember to use the API Name, not the display name.  Ex.  Product__c, Sub_Type__c</value>
+    </labels>
+    <labels>
+        <fullName>help_ExcludeAwayAndBusy</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ExcludeAwayAndBusy</shortDescription>
+        <value>Do not include agents marked as Away or Busy in count of available technicians.  If all agents are Away or Busy, channel will display as unavailable to new chat customers.</value>
+    </labels>
+    <labels>
+        <fullName>help_InsertCaseWhenNoTechAvailable</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_InsertCaseWhenNoTechAvailable</shortDescription>
+        <value>The default logic when starting an Instant Chat session is to have the session also create a Case for the technician to work on.  This setting disables that logic if the customer accesses this channel when no technician is available.</value>
+    </labels>
+    <labels>
+        <fullName>help_PostFieldMapping</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_PostFieldMapping</shortDescription>
+        <value>Select the Salesforce field to map this Rescue field to</value>
+    </labels>
+    <labels>
+        <fullName>help_ReassignOnAccept</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ReassignOnAccept</shortDescription>
+        <value>If checked, will automatically reassign the Case to the user whose username (SF login) matches the Rescue technician SSO ID. This is helpful if your technicians transfer sessions, but forgot to transfer ownership of the Case.</value>
+    </labels>
+    <labels>
+        <fullName>help_RedirectIfNoTech</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_RedirectIfNoTech</shortDescription>
+        <value>If no Technician is available in this channel, redirect to the URL specified.</value>
+    </labels>
+    <labels>
+        <fullName>help_RescueEmail</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_RescueEmail</shortDescription>
+        <value>Your LogMeIn Rescue Account Email.  This should match your Salesforce login to ensure Single Sign On will work properly.</value>
+    </labels>
+    <labels>
+        <fullName>help_RescuePassword</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_RescuePassword</shortDescription>
+        <value>Your LogMeIn Rescue Account Password</value>
+    </labels>
+    <labels>
+        <fullName>help_SSOPassword</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_SSOPassword</shortDescription>
+        <value>The Single Sign On password for the LogMeIn Rescue account.  This is created in the Rescue Admin Center.</value>
+    </labels>
+    <labels>
+        <fullName>help_ShowEmailLink</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ShowEmailLink</shortDescription>
+        <value>This setting will specify whether or not the &quot;Email PIN&quot; button shows when generating PIN codes from a ticket.</value>
+    </labels>
+    <labels>
+        <fullName>help_ShowNoTechMessage</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_ShowNoTechMessage</shortDescription>
+        <value>Display a message to the user when accessing your chat and no technician is available to service them.  This message is customized in the Custom Labels section.</value>
+    </labels>
+    <labels>
+        <fullName>help_TCNotRequired</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_TCNotRequired</shortDescription>
+        <value>This setting allows you to control whether the tech console is required to generate a PIN code or not. The default is true, meaning you can generate PIN codes without having the Tech Console running.</value>
+    </labels>
+    <labels>
+        <fullName>help_UseLooseCaseQuery</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_UseLooseCaseQuery</shortDescription>
+        <value>Check this box if you would like the Post to URL handler to look at Cfield 1-5 for a Case Number (ex. 00012345) instead of only depending on Tracking0.  Do not use if your custom field values could overlap Case Numbers in Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>help_helponthissection</fullName>
+        <categories>rescueintegration</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>help_helponthissection</shortDescription>
+        <value>Help on this section</value>
+    </labels>
+</CustomLabels>

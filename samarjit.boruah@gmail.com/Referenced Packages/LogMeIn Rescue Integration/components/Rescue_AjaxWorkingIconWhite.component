@@ -1,0 +1,7 @@
+<apex:component >
+	<apex:actionStatus id="status" >
+		<apex:facet name="start" >
+			<apex:image url="{!URLFOR($Resource.logmein__Rescue_Resources, 'images/loader_white.gif')}" />
+		</apex:facet>
+	</apex:actionStatus>
+</apex:component>

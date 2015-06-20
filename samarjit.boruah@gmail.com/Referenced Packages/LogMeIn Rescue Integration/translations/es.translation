@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- LogMeIn Rescue --></label>
+        <name>LogMeIn_Rescue</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- AttachChatLogAsAFile --></label>
+        <name>AttachChatLogAsAFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Beta --></label>
+        <name>Beta</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChannelStatusCacheTimeout --></label>
+        <name>ChannelStatusCacheTimeout</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChatLog --></label>
+        <name>ChatLog</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChatNow --></label>
+        <name>ChatNow</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ChatUnavailable --></label>
+        <name>ChatUnavailable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CloseTicketAtSessionEnd --></label>
+        <name>CloseTicketAtSessionEnd</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CodeToEmbedFormLink --></label>
+        <name>CodeToEmbedFormLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CodeToEmbedStatusImage --></label>
+        <name>CodeToEmbedStatusImage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField1 --></label>
+        <name>CustomField1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField2 --></label>
+        <name>CustomField2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField2Mapping --></label>
+        <name>CustomField2Mapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField3 --></label>
+        <name>CustomField3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField3Mapping --></label>
+        <name>CustomField3Mapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField4 --></label>
+        <name>CustomField4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField4Mapping --></label>
+        <name>CustomField4Mapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField5 --></label>
+        <name>CustomField5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomField5Mapping --></label>
+        <name>CustomField5Mapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomFieldMapping --></label>
+        <name>CustomFieldMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CustomerName --></label>
+        <name>CustomerName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- DoNotRequireActiveTC --></label>
+        <name>DoNotRequireActiveTC</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Enable --></label>
+        <name>Enable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EndOfSessionMapping --></label>
+        <name>EndOfSessionMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EndOfSessionMappingText --></label>
+        <name>EndOfSessionMappingText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_AuthCodeGenerationFailed --></label>
+        <name>Error_AuthCodeGenerationFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_ErrorGettingPINCode --></label>
+        <name>Error_ErrorGettingPINCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_GeneratingEmailText --></label>
+        <name>Error_GeneratingEmailText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_HandlingRescueURLPost --></label>
+        <name>Error_HandlingRescueURLPost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_RescueAPIReturned --></label>
+        <name>Error_RescueAPIReturned</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_RetrievingLoginURL --></label>
+        <name>Error_RetrievingLoginURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_SendingEmailEnterValid --></label>
+        <name>Error_SendingEmailEnterValid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_SettingAuthCodeFailed --></label>
+        <name>Error_SettingAuthCodeFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_UnableToCloseCase --></label>
+        <name>Error_UnableToCloseCase</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error_UnableToFindUserWithEmail --></label>
+        <name>Error_UnableToFindUserWithEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ExcludeAwayAndBusy --></label>
+        <name>ExcludeAwayAndBusy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- HelpGuideLink --></label>
+        <name>HelpGuideLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info_CaseClosedSuccessfully --></label>
+        <name>Info_CaseClosedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Info_SessionDataPostedSuccessfully --></label>
+        <name>Info_SessionDataPostedSuccessfully</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Initialize --></label>
+        <name>Initialize</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InsertCaseWhenNoTech --></label>
+        <name>InsertCaseWhenNoTech</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InstantChatChannels --></label>
+        <name>InstantChatChannels</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InstantChatChannelsText --></label>
+        <name>InstantChatChannelsText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- InstantChatChannelsTexta --></label>
+        <name>InstantChatChannelsTexta</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LastActionTime --></label>
+        <name>LastActionTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LocationToWriteSessionData --></label>
+        <name>LocationToWriteSessionData</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- LookForCaseNumber --></label>
+        <name>LookForCaseNumber</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ModifyChannel --></label>
+        <name>ModifyChannel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- NoTechLabel --></label>
+        <name>NoTechLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrganizationSettings --></label>
+        <name>OrganizationSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- OrganizationSettingsText --></label>
+        <name>OrganizationSettingsText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Production --></label>
+        <name>Production</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ReassignCaseOnSessionAccept --></label>
+        <name>ReassignCaseOnSessionAccept</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RedirectIfNoTech --></label>
+        <name>RedirectIfNoTech</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RemoteSupport --></label>
+        <name>RemoteSupport</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueAccountEmail --></label>
+        <name>RescueAccountEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueAccountsUnlinked --></label>
+        <name>RescueAccountsUnlinked</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueChannelSettingsUpdated --></label>
+        <name>RescueChannelSettingsUpdated</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueChannelsSynchronized --></label>
+        <name>RescueChannelsSynchronized</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueCompanyId --></label>
+        <name>RescueCompanyId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueCopyright --></label>
+        <name>RescueCopyright</name>
+    </customLabels>
+    <customLabels>
+        <label>Enviar Código</label>
+        <name>RescueEmailCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueEmailMessage --></label>
+        <name>RescueEmailMessage</name>
+    </customLabels>
+    <customLabels>
+        <label>Correo electrónico enviado</label>
+        <name>RescueEmailSentTo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueEmailTo --></label>
+        <name>RescueEmailTo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInitializeSettingsException --></label>
+        <name>RescueInitializeSettingsException</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstance --></label>
+        <name>RescueInstance</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChat --></label>
+        <name>RescueInstantChat</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChatFormCField1 --></label>
+        <name>RescueInstantChatFormCField1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChatFormCField2 --></label>
+        <name>RescueInstantChatFormCField2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChatFormCField3 --></label>
+        <name>RescueInstantChatFormCField3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChatFormCField4 --></label>
+        <name>RescueInstantChatFormCField4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueInstantChatFormCField5 --></label>
+        <name>RescueInstantChatFormCField5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueLinkFooter --></label>
+        <name>RescueLinkFooter</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueLoginFailed --></label>
+        <name>RescueLoginFailed</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueLoginInfo --></label>
+        <name>RescueLoginInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueLoginInfoText --></label>
+        <name>RescueLoginInfoText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueOrgSettingsSaved --></label>
+        <name>RescueOrgSettingsSaved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescuePassword --></label>
+        <name>RescuePassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueSessionDataMappingSaved --></label>
+        <name>RescueSessionDataMappingSaved</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueSuccessfullyLinkedAccounts --></label>
+        <name>RescueSuccessfullyLinkedAccounts</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueSuccessfullyLinkedAccountsSetup --></label>
+        <name>RescueSuccessfullyLinkedAccountsSetup</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueTechConsoleRequired --></label>
+        <name>RescueTechConsoleRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- RescueURLPostError --></label>
+        <name>RescueURLPostError</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SSOPassword --></label>
+        <name>SSOPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveMappingSettings --></label>
+        <name>SaveMappingSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SaveSettings --></label>
+        <name>SaveSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SessionClosingTime --></label>
+        <name>SessionClosingTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SessionId --></label>
+        <name>SessionId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SessionPickupTime --></label>
+        <name>SessionPickupTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ShowEmailPINLink --></label>
+        <name>ShowEmailPINLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ShowNoTechAvailableMessage --></label>
+        <name>ShowNoTechAvailableMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SyncChannels --></label>
+        <name>SyncChannels</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField0 --></label>
+        <name>TechSurveyField0</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField1 --></label>
+        <name>TechSurveyField1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField2 --></label>
+        <name>TechSurveyField2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField3 --></label>
+        <name>TechSurveyField3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField4 --></label>
+        <name>TechSurveyField4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField5 --></label>
+        <name>TechSurveyField5</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField6 --></label>
+        <name>TechSurveyField6</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField7 --></label>
+        <name>TechSurveyField7</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField8 --></label>
+        <name>TechSurveyField8</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechSurveyField9 --></label>
+        <name>TechSurveyField9</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechnicianEmail --></label>
+        <name>TechnicianEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechnicianId --></label>
+        <name>TechnicianId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- TechnicianName --></label>
+        <name>TechnicianName</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UpdateChannelSettings --></label>
+        <name>UpdateChannelSettings</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseCustomMapping --></label>
+        <name>UseCustomMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseCustomMappingText --></label>
+        <name>UseCustomMappingText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseCustomSessionMapping --></label>
+        <name>UseCustomSessionMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseDefault --></label>
+        <name>UseDefault</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseDefaultSessionMapping --></label>
+        <name>UseDefaultSessionMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UseDefaultText --></label>
+        <name>UseDefaultText</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WaitingTime --></label>
+        <name>WaitingTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WorkTime --></label>
+        <name>WorkTime</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- WriteToObject --></label>
+        <name>WriteToObject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_APIHost --></label>
+        <name>help_APIHost</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_AttachChatAsFile --></label>
+        <name>help_AttachChatAsFile</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ChannelFormLink --></label>
+        <name>help_ChannelFormLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ChannelImageCode --></label>
+        <name>help_ChannelImageCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ChannelSelect --></label>
+        <name>help_ChannelSelect</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ChannelStatusCacheTimeout --></label>
+        <name>help_ChannelStatusCacheTimeout</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_CloseOnSessionEnd --></label>
+        <name>help_CloseOnSessionEnd</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_CompanyID --></label>
+        <name>help_CompanyID</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_CustomFieldEnable --></label>
+        <name>help_CustomFieldEnable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_CustomFieldMapping --></label>
+        <name>help_CustomFieldMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ExcludeAwayAndBusy --></label>
+        <name>help_ExcludeAwayAndBusy</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_InsertCaseWhenNoTechAvailable --></label>
+        <name>help_InsertCaseWhenNoTechAvailable</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_PostFieldMapping --></label>
+        <name>help_PostFieldMapping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ReassignOnAccept --></label>
+        <name>help_ReassignOnAccept</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_RedirectIfNoTech --></label>
+        <name>help_RedirectIfNoTech</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_RescueEmail --></label>
+        <name>help_RescueEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_RescuePassword --></label>
+        <name>help_RescuePassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_SSOPassword --></label>
+        <name>help_SSOPassword</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ShowEmailLink --></label>
+        <name>help_ShowEmailLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_ShowNoTechMessage --></label>
+        <name>help_ShowNoTechMessage</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_TCNotRequired --></label>
+        <name>help_TCNotRequired</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_UseLooseCaseQuery --></label>
+        <name>help_UseLooseCaseQuery</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- help_helponthissection --></label>
+        <name>help_helponthissection</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Rescue Settings --></label>
+        <name>Rescue_Settings</name>
+    </customTabs>
+    <reportTypes>
+        <description><!-- Tickets with Activities --></description>
+        <label><!-- Tickets with Activities --></label>
+        <name>Tickets_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+</Translations>

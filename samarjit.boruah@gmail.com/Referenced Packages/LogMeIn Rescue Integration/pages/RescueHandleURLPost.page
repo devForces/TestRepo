@@ -1,0 +1,6 @@
+<apex:page controller="logmein.RescueAPICon" action="{!handleUrlPost}" showHeader="false" sidebar="false" >
+
+<apex:pageBlock >
+<apex:pageMessages escape="false" />
+</apex:pageBlock>
+</apex:page>

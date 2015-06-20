@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Optionally used Beta API.  Admin chooses which API version their org will interact with in Rescue Integration Settings.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://beta.logmeinrescue.com</url>
+</RemoteSiteSetting>

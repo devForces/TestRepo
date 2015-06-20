@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BytesTransmitted__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The number of bytes transmitted during the Rescue session.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of bytes transmitted during the Rescue session.</inlineHelpText>
+        <label>BytesTransmitted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CField0__c</fullName>
+        <deprecated>false</deprecated>
+        <description>CField0, which is designated for the customer&apos;s name.</description>
+        <externalId>false</externalId>
+        <label>Customer Name</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CField1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom field 1 as defined in the Rescue Admin Center.</description>
+        <externalId>false</externalId>
+        <label>CField1</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CField2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom field 2 as defined in the Rescue Admin Center.</description>
+        <externalId>false</externalId>
+        <label>CField2</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CField3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom field 3 as defined in the Rescue Admin Center.</description>
+        <externalId>false</externalId>
+        <label>CField3</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CField4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom field 4 as defined in the Rescue Admin Center.</description>
+        <externalId>false</externalId>
+        <label>CField4</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CField5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom field 5 as defined in the Rescue Admin Center.</description>
+        <externalId>false</externalId>
+        <label>CField5</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClosingTime__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Closing Time</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Action_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The timestamp for the last action the technician performed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The timestamp for the last action the technician performed.</inlineHelpText>
+        <label>Last Action Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Local_Closing_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The localized (for the viewing user) closing time. This field should be included in reports and page layouts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The localized (for the viewing user) closing time.</inlineHelpText>
+        <label>Local Closing Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Local_Pickup_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The local (for the viewing user) pickup time for the session. This should be used in page layouts and reports.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The local (for the viewing user) pickup time for the session.</inlineHelpText>
+        <label>Local Pickup Time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PickupTime__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pickup Time</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechDescr__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Technician Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Technician ID</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Technician Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey0__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 0.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 0</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 1.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 1</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 2.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 2</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 3.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 3</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey4__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 4.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 4</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey5__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 5.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 5</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey6__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 6.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 6</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey7__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 7.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 7</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey8__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tech Survey 8</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TechSurvey9__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Response to Tech Survey question 9.</description>
+        <externalId>false</externalId>
+        <label>Tech Survey 9</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WaitingTime__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the number of seconds the customer waited before the technician accepted the session.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the number of seconds the customer waited before the technician accepted the session.</inlineHelpText>
+        <label>Waiting Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

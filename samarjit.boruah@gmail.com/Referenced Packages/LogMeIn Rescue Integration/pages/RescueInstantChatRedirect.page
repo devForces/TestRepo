@@ -1,0 +1,55 @@
+<apex:page showHeader="false" controller="logmein.RescueInstantChatCon" id="rescueICRPage" standardStylesheets="false" title="Rescue Instant Chat">
+	<head>
+		<apex:includeScript value="https://secure.logmeinrescue.com/InstantChat/InstantChat.aspx" />
+		<apex:includeScript value="{!URLFOR($Resource.logmein__RescueInstantChat, '/jquery1_4.js')}" />
+		<apex:includescript value="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.min.js" />
+		<apex:stylesheet value="{!URLFOR($Resource.logmein__RescueInstantChat, '/RescueInstantChatFormCSS.css')}" />
+		<title>{!$Label.RescueInstantChat}</title>
+	</head>
+	<body onload="handleRebootOrRefresh()">
+		<apex:outputpanel id="mainPanel1" styleClass="main">
+			<script type="text/javascript">
+				$(document).ready(function(){
+					loadInstantChat();
+				});
+				function getParameter(name){
+					name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+					var regexS = "[\\?&]" + name + "=([^&#]*)";
+					var regex = new RegExp(regexS);
+					var results = regex.exec(window.location.href);
+					if (results == null)
+						return "";
+					else
+						return results[1];
+				}
+				function loadInstantChat(){
+					$('.ldrimg').addClass('hide');
+				    var serverprotocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+				    var ICLoader = new RescueInstantChatLoader();
+				    ICLoader.ICContainer = "ICContainer";
+				    ICLoader.HostedCSS = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'InstantChat.css')}";
+				    ICLoader.HostedLanguagesForChatOnlyMode = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'LanguagesForChatOnlyMode.js')}";
+				    //ICLoader.HostedLanguagesForAppletMode = serverprotocol + "{!HostName}{!URLFOR($Resource.RescueInstantChat, 'LanguagesForAppletMode.js')}";
+				    ICLoader.EntryID = getParameter('channel');
+				    ICLoader.Name = getParameter('name');
+			    	ICLoader.Comment1 = getParameter('cfield1');
+			    	ICLoader.Comment2 = getParameter('cfield2');
+			    	ICLoader.Comment3 = getParameter('cfield3');
+			    	ICLoader.Comment4 = getParameter('cfield4');
+			    	ICLoader.Comment5 = getParameter('cfield5');
+				    ICLoader.Tracking0 = getParameter('tracking0');
+				    ICLoader.Language = getParameter('lang');
+				    ICLoader.HostedErrorHandler = function(ErrorName){} /* optional */
+				    ICLoader.Start();
+				}
+				function handleRebootOrRefresh(){
+				    if ((window.location + "").indexOf("rescuewebsessionid") != -1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+				    if (window.location.hash.length == webSessionIdLength + 1){document.getElementById("ICContainer").style.display=""; loadInstantChat();} /* optional */
+				} 
+			</script>
+		</apex:outputpanel>
+		<span class="ldrimg hide"></span>
+		<apex:pageMessages id="messages" />
+		<div id="ICContainer" style="margin:2px 0px 0px 2px; width: 353px; height: 454px;"></div>
+	</body>
+</apex:page>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RescueIntegration2</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RescueIntegration2</value>
+    </caseValues>
+    <fields>
+        <help><!-- The host that should be used when connecting the the Rescue API.  Acceptable values are &quot;secure.logmeinrescue.com&quot; and &quot;beta.logmeinrescue.com&quot;. --></help>
+        <label><!-- API Host --></label>
+        <name>API_Host__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting allows you to save the chat log as an attachment to the case rather than to the description field of the activity.  If your chat sessions are usually lengthy, you should enable this. --></help>
+        <label><!-- AttachChatLogAsFile --></label>
+        <name>AttachChatLogAsFile__c</name>
+    </fields>
+    <fields>
+        <help><!-- This settings will enable the URL Post handler to close the Case after writing the Rescue session data.  This is useful for integrations using Channels where the agent does not need to interact with the Case at all, but reporting is still desired. --></help>
+        <label><!-- Close Case After URL Post --></label>
+        <name>CloseCaseAfterURLPost__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Company ID for the Rescue account.  This can be found in the Rescue SSO code sample of the Admin Center. --></help>
+        <label><!-- CompanyID --></label>
+        <name>CompanyID__c</name>
+    </fields>
+    <fields>
+        <help><!-- If checked, the URL Post handler will automatically reassign the Case to the user whose email matches the Rescue technician email.  This is helpful if your technicians transfer sessions, but forgot to transfer ownership of the Case. --></help>
+        <label><!-- Force Case Assignment To Technician --></label>
+        <name>ForceCaseAssignmentToTechnician__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Single Sign On password for the LogMeIn Rescue account. --></help>
+        <label><!-- RescueSSOPwd --></label>
+        <name>RescueSSOPwd__c</name>
+    </fields>
+    <fields>
+        <label><!-- ShowEmailLink --></label>
+        <name>ShowEmailLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting allows you to control whether the tech console is required to generate a PIN code or not.  The default is true, meaning you can generate PIN codes without having the Tech Console running. --></help>
+        <label><!-- TechConsoleNotRequired --></label>
+        <name>TechConsoleNotRequired__c</name>
+    </fields>
+    <fields>
+        <help><!-- This setting allows Post to URL to search each custom field for the case number, instead of just tracking 0. --></help>
+        <label><!-- UseLooseCaseQuery --></label>
+        <name>UseLooseCaseQuery__c</name>
+    </fields>
+    <fields>
+        <help><!-- The strategy used to map the session.  &quot;default&quot; = Case as parent, Task with session data as child.  &quot;custom&quot; = complete control over mapping location (as long as data types line up with SF schema). --></help>
+        <label><!-- posttourlstrategy --></label>
+        <name>posttourlstrategy__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map chatlog to. --></help>
+        <label><!-- selectedchatlogmapping --></label>
+        <name>selectedchatlogmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map closingtime to. --></help>
+        <label><!-- selectedclosingtimemapping --></label>
+        <name>selectedclosingtimemapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map lastactiontime to. --></help>
+        <label><!-- selectedlastactiontimemapping --></label>
+        <name>selectedlastactiontimemapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map notes to. --></help>
+        <label><!-- selectednotesmapping --></label>
+        <name>selectednotesmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map pickuptime to. --></help>
+        <label><!-- selectedpickuptimemapping --></label>
+        <name>selectedpickuptimemapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map platform to. --></help>
+        <label><!-- selectedplatformmapping --></label>
+        <name>selectedplatformmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield0 to.  (customer name) --></help>
+        <label><!-- selectedpostcfield0mapping --></label>
+        <name>selectedpostcfield0mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield1 to. --></help>
+        <label><!-- selectedpostcfield1mapping --></label>
+        <name>selectedpostcfield1mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield2 to. --></help>
+        <label><!-- selectedpostcfield2mapping --></label>
+        <name>selectedpostcfield2mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield3 to. --></help>
+        <label><!-- selectedpostcfield3mapping --></label>
+        <name>selectedpostcfield3mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield4 to. --></help>
+        <label><!-- selectedpostcfield4mapping --></label>
+        <name>selectedpostcfield4mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map cfield5 to. --></help>
+        <label><!-- selectedpostcfield5mapping --></label>
+        <name>selectedpostcfield5mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The object selected for custom session mapping location. --></help>
+        <label><!-- selectedpostobjectmapping --></label>
+        <name>selectedpostobjectmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map sessionid to. --></help>
+        <label><!-- selectedsessionidmapping --></label>
+        <name>selectedsessionidmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey0 to. --></help>
+        <label><!-- selectedsurveyfield0mapping --></label>
+        <name>selectedsurveyfield0mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey1 to. --></help>
+        <label><!-- selectedsurveyfield1mapping --></label>
+        <name>selectedsurveyfield1mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey2 to. --></help>
+        <label><!-- selectedsurveyfield2mapping --></label>
+        <name>selectedsurveyfield2mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey3 to. --></help>
+        <label><!-- selectedsurveyfield3mapping --></label>
+        <name>selectedsurveyfield3mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey4 to. --></help>
+        <label><!-- selectedsurveyfield4mapping --></label>
+        <name>selectedsurveyfield4mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey5 to. --></help>
+        <label><!-- selectedsurveyfield5mapping --></label>
+        <name>selectedsurveyfield5mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey6 to. --></help>
+        <label><!-- selectedsurveyfield6mapping --></label>
+        <name>selectedsurveyfield6mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey7 to. --></help>
+        <label><!-- selectedsurveyfield7mapping --></label>
+        <name>selectedsurveyfield7mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey8 to. --></help>
+        <label><!-- selectedsurveyfield8mapping --></label>
+        <name>selectedsurveyfield8mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map survey9 to. --></help>
+        <label><!-- selectedsurveyfield9mapping --></label>
+        <name>selectedsurveyfield9mapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map techdescr to. --></help>
+        <label><!-- selectedtechdescrmapping --></label>
+        <name>selectedtechdescrmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map techemail to. --></help>
+        <label><!-- selectedtechemailmapping --></label>
+        <name>selectedtechemailmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map techid to. --></help>
+        <label><!-- selectedtechidmapping --></label>
+        <name>selectedtechidmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map techname to. --></help>
+        <label><!-- selectedtechnamemapping --></label>
+        <name>selectedtechnamemapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map techssoid to. --></help>
+        <label><!-- selectedtechssoidmapping --></label>
+        <name>selectedtechssoidmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map transmitted to. --></help>
+        <label><!-- selectedtransmittedmapping --></label>
+        <name>selectedtransmittedmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field used to do an upsert on a custom mapped object for sessions.  (optional) --></help>
+        <label><!-- selectedupsertfieldmapping --></label>
+        <name>selectedupsertfieldmapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map waitingtime to. --></help>
+        <label><!-- selectedwaitingtimemapping --></label>
+        <name>selectedwaitingtimemapping__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to map worktime to. --></help>
+        <label><!-- selectedworktimemapping --></label>
+        <name>selectedworktimemapping__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

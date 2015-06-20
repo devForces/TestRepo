@@ -1,0 +1,8 @@
+<apex:component controller="attachedSolution" access="global" >
+    <apex:attribute name="caseId" assignTo="{!caseId}" description="Set the case Id" type="String" access="global" required="true"/>
+    <apex:attribute name="language" description="Set the language of the solution" type="String" required="false"/>
+    
+    <apex:outputText value="{!sol.SolutionName}"/>
+    
+  
+</apex:component>

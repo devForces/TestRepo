@@ -1,0 +1,5 @@
+<apex:page controller="logmein.RescueAPICon" action="{!handleCustomUrlPost}">
+
+<apex:pageMessages />
+
+</apex:page>

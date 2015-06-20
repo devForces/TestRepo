@@ -1,0 +1,1 @@
+public virtual class DropboxException extends Exception {}

@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Protected</customSettingsVisibility>
+    <description>Settings for the LogMeIn Rescue integration from the AppExchange</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>API_Host__c</fullName>
+        <defaultValue>&quot;secure.logmeinrescue.com&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The host that should be used when connecting the the Rescue API.  Acceptable values are &quot;secure.logmeinrescue.com&quot; and &quot;beta.logmeinrescue.com&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The host that should be used when connecting the the Rescue API.  Acceptable values are &quot;secure.logmeinrescue.com&quot; and &quot;beta.logmeinrescue.com&quot;.</inlineHelpText>
+        <label>API Host</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AttachChatLogAsFile__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This setting allows you to save the chat log as an attachment to the case rather than to the description field of the activity.  If your chat sessions are usually lengthy, you should enable this.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This setting allows you to save the chat log as an attachment to the case rather than to the description field of the activity.  If your chat sessions are usually lengthy, you should enable this.</inlineHelpText>
+        <label>AttachChatLogAsFile</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CloseCaseAfterURLPost__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This settings will enable the URL Post handler to close the Case after writing the Rescue session data.  This is useful for integrations using Channels where the agent does not need to interact with the Case at all, but reporting is still desired.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This settings will enable the URL Post handler to close the Case after writing the Rescue session data.  This is useful for integrations using Channels where the agent does not need to interact with the Case at all, but reporting is still desired.</inlineHelpText>
+        <label>Close Case After URL Post</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CompanyID__c</fullName>
+        <defaultValue>&quot;000&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Company ID for the Rescue account.  This can be found in the Rescue SSO code sample of the Admin Center.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Company ID for the Rescue account.  This can be found in the Rescue SSO code sample of the Admin Center.</inlineHelpText>
+        <label>CompanyID</label>
+        <length>12</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ForceCaseAssignmentToTechnician__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, the URL Post handler will automatically reassign the Case to the user whose email matches the Rescue technician email.  This is helpful if your technicians transfer sessions, but forgot to transfer ownership of the Case.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, the URL Post handler will automatically reassign the Case to the user whose email matches the Rescue technician email.  This is helpful if your technicians transfer sessions, but forgot to transfer ownership of the Case.</inlineHelpText>
+        <label>Force Case Assignment To Technician</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RescueSSOPwd__c</fullName>
+        <defaultValue>&quot;password&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Single Sign On password for the LogMeIn Rescue account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Single Sign On password for the LogMeIn Rescue account.</inlineHelpText>
+        <label>RescueSSOPwd</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShowEmailLink__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ShowEmailLink</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TechConsoleNotRequired__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This setting allows you to control whether the tech console is required to generate a PIN code or not.  The default is true, meaning you can generate PIN codes without having the Tech Console running.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This setting allows you to control whether the tech console is required to generate a PIN code or not.  The default is true, meaning you can generate PIN codes without having the Tech Console running.</inlineHelpText>
+        <label>TechConsoleNotRequired</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UseLooseCaseQuery__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This setting allows Post to URL to search each custom field for the case number, instead of just tracking 0.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This setting allows Post to URL to search each custom field for the case number, instead of just tracking 0.</inlineHelpText>
+        <label>UseLooseCaseQuery</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>posttourlstrategy__c</fullName>
+        <defaultValue>&quot;default&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The strategy used to map the session.  &quot;default&quot; = Case as parent, Task with session data as child.  &quot;custom&quot; = complete control over mapping location (as long as data types line up with SF schema).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The strategy used to map the session.  &quot;default&quot; = Case as parent, Task with session data as child.  &quot;custom&quot; = complete control over mapping location (as long as data types line up with SF schema).</inlineHelpText>
+        <label>posttourlstrategy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedchatlogmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map chatlog to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map chatlog to.</inlineHelpText>
+        <label>selectedchatlogmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedclosingtimemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map closingtime to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map closingtime to.</inlineHelpText>
+        <label>selectedclosingtimemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedlastactiontimemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map lastactiontime to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map lastactiontime to.</inlineHelpText>
+        <label>selectedlastactiontimemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectednotesmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map notes to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map notes to.</inlineHelpText>
+        <label>selectednotesmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpickuptimemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map pickuptime to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map pickuptime to.</inlineHelpText>
+        <label>selectedpickuptimemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedplatformmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map platform to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map platform to.</inlineHelpText>
+        <label>selectedplatformmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield0mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield0 to.  (customer name)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield0 to.  (customer name)</inlineHelpText>
+        <label>selectedpostcfield0mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield1mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield1 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield1 to.</inlineHelpText>
+        <label>selectedpostcfield1mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield2mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield2 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield2 to.</inlineHelpText>
+        <label>selectedpostcfield2mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield3mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield3 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield3 to.</inlineHelpText>
+        <label>selectedpostcfield3mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield4mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield4 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield4 to.</inlineHelpText>
+        <label>selectedpostcfield4mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostcfield5mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map cfield5 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map cfield5 to.</inlineHelpText>
+        <label>selectedpostcfield5mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedpostobjectmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The object selected for custom session mapping location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The object selected for custom session mapping location.</inlineHelpText>
+        <label>selectedpostobjectmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsessionidmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map sessionid to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map sessionid to.</inlineHelpText>
+        <label>selectedsessionidmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield0mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey0 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey0 to.</inlineHelpText>
+        <label>selectedsurveyfield0mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield1mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey1 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey1 to.</inlineHelpText>
+        <label>selectedsurveyfield1mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield2mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey2 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey2 to.</inlineHelpText>
+        <label>selectedsurveyfield2mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield3mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey3 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey3 to.</inlineHelpText>
+        <label>selectedsurveyfield3mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield4mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey4 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey4 to.</inlineHelpText>
+        <label>selectedsurveyfield4mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield5mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey5 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey5 to.</inlineHelpText>
+        <label>selectedsurveyfield5mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield6mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey6 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey6 to.</inlineHelpText>
+        <label>selectedsurveyfield6mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield7mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey7 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey7 to.</inlineHelpText>
+        <label>selectedsurveyfield7mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield8mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey8 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey8 to.</inlineHelpText>
+        <label>selectedsurveyfield8mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedsurveyfield9mapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map survey9 to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map survey9 to.</inlineHelpText>
+        <label>selectedsurveyfield9mapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtechdescrmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map techdescr to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map techdescr to.</inlineHelpText>
+        <label>selectedtechdescrmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtechemailmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map techemail to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map techemail to.</inlineHelpText>
+        <label>selectedtechemailmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtechidmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map techid to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map techid to.</inlineHelpText>
+        <label>selectedtechidmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtechnamemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map techname to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map techname to.</inlineHelpText>
+        <label>selectedtechnamemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtechssoidmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map techssoid to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map techssoid to.</inlineHelpText>
+        <label>selectedtechssoidmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedtransmittedmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map transmitted to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map transmitted to.</inlineHelpText>
+        <label>selectedtransmittedmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedupsertfieldmapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field used to do an upsert on a custom mapped object for sessions.  (optional)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field used to do an upsert on a custom mapped object for sessions.  (optional)</inlineHelpText>
+        <label>selectedupsertfieldmapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedwaitingtimemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map waitingtime to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map waitingtime to.</inlineHelpText>
+        <label>selectedwaitingtimemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>selectedworktimemapping__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to map worktime to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to map worktime to.</inlineHelpText>
+        <label>selectedworktimemapping</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>RescueIntegration2</label>
+</CustomObject>

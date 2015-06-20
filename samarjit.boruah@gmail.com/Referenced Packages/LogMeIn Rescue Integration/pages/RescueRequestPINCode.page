@@ -1,0 +1,124 @@
+<apex:page controller="logmein.RescueAPICon" title="LogMeIn Rescue PIN Code"
+	action="{!requestPin}" showHeader="false" sidebar="false" id="page">
+	<head>
+	<title>LogMeIn Rescue – {!$Label.RemoteSupport}</title>
+
+	<style type="text/css">
+body {
+	font-family: tahoma, arial, verdana
+	margin-top: 10px; 
+	margin-left: 10px;
+}
+
+table,select {
+	font-family: tahoma, arial, verdana;
+	font-size: 11px
+}
+
+h1 {
+	font-size: 28px;
+	letter-spacing: -1px;
+	font-family: arial;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+input {
+	font-size: 10pt;
+	font-family: arial;
+}
+
+form {
+	margin: 0px;
+	padding-top: 5px;
+}
+
+.cmdbutton {
+	cell-padding: 10px;
+	float: right;	
+}
+
+</style>
+	</head>
+
+
+	<body>
+
+	<table width="420" border="0" cellpadding="0" cellspacing="0"
+		style="border-top: 5px solid black; border-bottom: 5px solid black; border-left: 2px solid black; border-right: 2px solid black">
+
+		<tr>
+			<td>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" style="width: 150px; text-align: left">
+					<table cellpadding="0" cellspacing="0" width="150">
+						<tr>
+							<td valign="top"
+								style="padding-top: 6px; padding-left: 18px; width: 155px; height: 40px">
+							<apex:image value="{!URLFOR($Resource.logmein__Rescue_Resources, 'images/rescue_pwdby_new.gif')}"
+								alt="Powered by LogMeIn Rescue"
+								title="Powered by LogMeIn Rescue" /></td>
+							<td style="width: 25px" valign="top"><apex:image value="{!URLFOR($Resource.logmein__Rescue_Resources, 'images/tri.gif')}" />
+							</td>
+						</tr>
+					</table>
+					</td>
+					<td align="right" valign="top" style="width: 100%">
+					<table cellpadding="0" cellspacing="0" style="height: 25px; background-color: Black;" width="100%" >					
+						<tr>
+							<td style="padding-left: 3px; padding-right: 3px; width: 100%" align="left">
+							</td>
+							<td style="padding-left: 3px;" align="right">
+								<c:Rescue_AjaxWorkingIcon />
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td	style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+
+					<apex:form style="padding-top: 20px;">
+						<apex:outputpanel id="pinblock">
+							<apex:outputPanel id="pinpanel" rendered="{!showPin}">
+								<h1>
+									<apex:outputLabel id="pintitlelabel" value="Rescue PIN Code:" />
+									<apex:outputLabel id="pincode" styleClass="pintext" value="{!pin}" />
+								</h1>
+							
+							<br />
+							<hr size="1" color="black" style="color: black" />
+						</apex:outputPanel>
+						</apex:outputpanel>
+						<apex:commandButton rendered="{!ShowEmlLink}" style="{!showButton}" styleClass="cmdbutton" id="emailpin" value="{!$Label.RescueEmailCode}" action="{!emailPin}" tabIndex="3" />
+					</apex:form></td>
+
+				</tr>
+				<tr>
+					<td>
+					<div class="messageblock"><apex:pageMessages id="messages" />
+					</div>
+					</td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" border="0"
+				style="width: 100%; height: 20px; background-color: black; color: white">
+				<tr>
+
+					<td style="padding-left: 20px; padding-bottom: 2px; white-space: nowrap; font-size: 8pt" valign="bottom">
+						<apex:outputLabel style="color: white;" value="{!$Label.RescueCopyright}" escape="false"/>
+					</td>
+
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+
+	</body>
+
+</apex:page>

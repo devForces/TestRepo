@@ -1,0 +1,35 @@
+<apex:page controller="ChangeParentController" action="{!initParentChange}" >
+<apex:pageMessages id="msg" />
+  <apex:form id="formID" >
+      <apex:pageBlock title="Select the destination parent" >
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Next" action="{!next1}"/>
+              <apex:commandLink value="cancel" action="{!cancel}" immediate="true"/>
+          </apex:pageBlockButtons>
+          <apex:pageblockSection >
+              <!--apex:pageblockSectionItem >
+                  <apex:outputLabel value="New Parent"></apex:outputLabel>
+                  <apex:inputField value="{!obj[fieldName]}" required="true"/>
+                  
+              </apex:pageblockSectionItem-->
+              
+          </apex:pageblockSection>
+          <apex:pageblockSection >
+              <apex:pageblockSectionItem >
+                  <apex:outputLabel value="New Parent"></apex:outputLabel>
+                  <apex:actionRegion >
+                      <apex:inputText required="true" value="{!searchStr}"/>
+                      <apex:commandButton value="Search" reRender="table,msg" />
+                 </apex:actionRegion>  
+              </apex:pageblockSectionItem>
+          </apex:pageblockSection>
+          <apex:pageBlockTable value="{!sObjList}" var="c" id="table">
+                <apex:column width="2%" >
+                    <apex:inputCheckbox value="{!c.selected}"/>
+                </apex:column>
+                <apex:column value="{!c.sObj['Name']}" />
+            </apex:pageBlockTable>
+         
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>
